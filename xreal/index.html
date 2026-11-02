@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>XREAL（原 Nreal）｜十年，把一块屏塞进一副眼镜</title>
+<meta name="description" content="XREAL 企业介绍：2017 年成立于北京，消费级 AR 眼镜公司，2026 年 4 月递表港交所。2025 年营收 5.16 亿元、毛利率 35.2%、全球 AR 眼镜销售收入份额 27.0%。资料整理截至 2026-11-02。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2308080a'/><path d='M8 12h4l4 4 4-4h4l-6 8h-4z' fill='%236b6fff'/></svg>">
+<style>
+  :root{
+    --bg:#08080a; --panel:#101014; --panel-2:#16161c;
+    --line:rgba(255,255,255,.1); --line-2:rgba(255,255,255,.18);
+    --ink:#f2f3f5; --ink-2:#a3a8b4; --ink-3:#6b7180;
+    --acc:#6b6fff; --acc-2:#8f7bff;
+    --sans:"Microsoft YaHei","PingFang SC","Hiragino Sans GB",-apple-system,system-ui,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg); color:var(--ink); font-family:var(--sans);
+    -webkit-font-smoothing:antialiased; line-height:1.72; overflow-x:hidden}
+
+  /* hero */
+  .hero{position:relative; overflow:hidden; border-bottom:1px solid var(--line)}
+  .hero__bg{position:absolute; inset:0; z-index:0}
+  .hero__bg img{width:100%; height:100%; object-fit:cover; object-position:center 42%; opacity:.85}
+  .hero__bg::after{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(100deg, #08080a 2%, rgba(8,8,10,.92) 34%, rgba(8,8,10,.35) 62%, rgba(8,8,10,.15) 100%);
+  }
+  .hero__in{position:relative; z-index:2; width:min(1080px,90vw); margin:0 auto;
+    padding:clamp(64px,12vh,116px) 0 clamp(56px,10vh,96px); max-width:1080px}
+  .hero__box{max-width:640px}
+  .eyebrow{display:flex; align-items:center; gap:11px; font-family:var(--mono); font-size:11px;
+    letter-spacing:.2em; color:rgba(255,255,255,.5); text-transform:uppercase}
+  .eyebrow i{width:20px; height:1px; background:rgba(255,255,255,.35); display:block}
+  h1{margin-top:22px; font-size:clamp(32px,5.4vw,60px); line-height:1.12; font-weight:800; letter-spacing:-.025em}
+  h1 em{font-style:normal; background:linear-gradient(94deg,var(--acc),var(--acc-2) 60%,#c9a6ff);
+    -webkit-background-clip:text; background-clip:text; color:transparent}
+  .hero p.lede{margin-top:24px; font-size:15px; line-height:1.9; color:rgba(255,255,255,.72); max-width:54ch}
+  .hero p.lede b{color:#fff; font-weight:600}
+
+  .wrap{width:min(1080px,90vw); margin:0 auto}
+
+  /* stats */
+  .stats{list-style:none; display:grid; grid-template-columns:repeat(4,1fr);
+    border-bottom:1px solid var(--line)}
+  .stats li{padding:26px clamp(12px,2vw,24px); border-right:1px solid var(--line)}
+  .stats li:last-child{border-right:0}
+  .stats .v{display:block; font-size:clamp(20px,2.6vw,28px); font-weight:750; letter-spacing:-.025em;
+    font-variant-numeric:tabular-nums; line-height:1.2}
+  .stats .v i{font-style:normal; font-size:.46em; color:var(--ink-3); margin-left:4px; font-weight:500}
+  .stats .k{display:block; margin-top:9px; font-size:12px; color:var(--ink-3); line-height:1.6}
+
+  section{padding:clamp(50px,8vh,84px) 0; border-top:1px solid var(--line)}
+  .head{display:flex; gap:18px; align-items:baseline; margin-bottom:clamp(24px,4vh,38px); flex-wrap:wrap}
+  .num{font-family:var(--mono); font-size:12px; color:var(--acc); letter-spacing:.12em; padding-top:7px}
+  h2{font-size:clamp(22px,3.1vw,32px); font-weight:750; letter-spacing:-.015em; line-height:1.3}
+  h2 span{color:var(--ink-3); font-weight:400}
+  .cols{display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(24px,4vw,52px)}
+  p.t{font-size:14.5px; color:var(--ink-2); line-height:1.92}
+  p.t + p.t{margin-top:15px}
+  p.t b{color:var(--ink); font-weight:600}
+
+  /* 时间线 */
+  .log{margin-top:6px; border-top:1px solid var(--line)}
+  .log li{display:grid; grid-template-columns:104px 1fr; gap:16px; padding:14px 0; border-bottom:1px solid var(--line)}
+  .log time{font-family:var(--mono); font-size:12px; color:var(--acc); letter-spacing:.04em; padding-top:2px}
+  .log p{font-size:13.5px; color:var(--ink-2); line-height:1.75}
+
+  /* 财务表 */
+  .fin{margin-top:6px; border-top:1px solid var(--line)}
+  .fin .row{display:grid; grid-template-columns:1.1fr .8fr 1.4fr; gap:16px; padding:15px 0;
+    border-bottom:1px solid var(--line); align-items:baseline}
+  .fin .k{font-size:13.5px; color:var(--ink-2)}
+  .fin .v{font-family:var(--mono); font-size:14px; color:var(--ink); font-variant-numeric:tabular-nums}
+  .fin .d{font-size:12.5px; color:var(--ink-3); line-height:1.65}
+  .fin .up{color:#5fd39a}
+  .fin .down{color:#ff8a7a}
+
+  /* 产品卡 */
+  .prods{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(14px,2vw,22px)}
+  .prod{background:#fff; color:#0b0b0d; border:1px solid rgba(255,255,255,.12); overflow:hidden;
+    transition:transform .28s cubic-bezier(.22,.61,.36,1)}
+  .prod:hover{transform:translateY(-4px)}
+  .prod__img{background:#fff; display:flex; align-items:center; justify-content:center; padding:14px 14px 0}
+  .prod__img img{width:100%; max-width:230px; display:block}
+  .prod__b{padding:4px 20px 20px}
+  .prod__b h3{font-size:16px; font-weight:750; letter-spacing:-.01em}
+  .prod__b .sub{font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; color:#8a8f9c; margin-top:5px; text-transform:uppercase}
+  .prod__b p{font-size:12.5px; line-height:1.7; color:#4d5361; margin-top:9px}
+  .prod__b .px{font-family:var(--mono); font-size:13px; font-weight:600; margin-top:11px; color:#1b1c22}
+
+  .note{font-size:12px; color:var(--ink-3); margin-top:18px; line-height:1.7}
+
+  /* AURA 区块 */
+  .aura{background:linear-gradient(160deg, rgba(107,111,255,.14), rgba(107,111,255,.03) 55%, transparent);
+    border:1px solid var(--line); padding:clamp(24px,4vw,40px); margin-top:6px}
+  .aura h3{font-size:clamp(19px,2.5vw,25px); font-weight:750; letter-spacing:-.015em}
+  .aura .three{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:24px}
+  .aura .three div{border-top:1px solid var(--line-2); padding-top:14px}
+  .aura .three b{display:block; font-size:13.5px; margin-bottom:6px}
+  .aura .three span{font-size:12.5px; color:var(--ink-2); line-height:1.7}
+  .aura .line{margin-top:24px; font-size:13.5px; color:var(--ink-2); line-height:1.9}
+  .aura .line b{color:var(--ink)}
+
+  /* 名额表 */
+  .share{margin-top:6px; border-top:1px solid var(--line)}
+  .share .row{display:grid; grid-template-columns:1.2fr .7fr 1.6fr; gap:14px; padding:12px 0;
+    border-bottom:1px solid var(--line); align-items:center}
+  .share .nm{font-size:13.5px}
+  .share .pc{font-family:var(--mono); font-size:13px; font-variant-numeric:tabular-nums; color:var(--ink-2)}
+  .share .bar{height:3px; background:rgba(255,255,255,.08); position:relative}
+  .share .bar i{position:absolute; left:0; top:0; bottom:0; background:var(--acc); display:block}
+  .share .row.me .nm{color:#fff; font-weight:650}
+  .share .row.me .pc{color:var(--acc-2)}
+
+  /* 岗位 */
+  .roles{list-style:none; margin-top:8px; border-top:1px solid var(--line)}
+  .roles li{display:flex; justify-content:space-between; gap:16px; padding:14px 0;
+    border-bottom:1px solid var(--line); flex-wrap:wrap; align-items:baseline}
+  .roles b{font-size:14px; font-weight:650}
+  .roles span{font-family:var(--mono); font-size:11px; color:var(--ink-3); letter-spacing:.02em}
+
+  .cta{display:flex; gap:13px; flex-wrap:wrap; margin-top:clamp(28px,4vh,38px)}
+  .btn{display:inline-flex; align-items:center; padding:13px 24px; font-size:13.5px; text-decoration:none;
+    border:1px solid var(--line-2); color:var(--ink); transition:.2s; letter-spacing:.02em}
+  .btn:hover{border-color:var(--ink-3); background:rgba(255,255,255,.05)}
+  .btn--fill{background:var(--acc); border-color:var(--acc); color:#0a0a12; font-weight:700}
+  .btn--fill:hover{background:var(--acc-2); border-color:var(--acc-2)}
+
+  footer{border-top:1px solid var(--line); padding:clamp(32px,5vh,48px) 0 clamp(28px,4vh,42px);
+    display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap;
+    font-size:11.5px; color:var(--ink-3); line-height:1.85}
+  footer b{color:var(--ink-2); font-weight:600}
+  footer p{max-width:64ch}
+
+  @media (max-width:900px){
+    .stats{grid-template-columns:1fr 1fr}
+    .cols,.prods,.aura .three{grid-template-columns:1fr}
+    .fin .row,.share .row,.log li{grid-template-columns:1fr; gap:6px}
+    .fin .v{order:-1}
+    .hero__bg img{object-position:center 55%}
+    .hero__bg::after{background:linear-gradient(180deg, rgba(8,8,10,.55), rgba(8,8,10,.95) 55%)}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero__bg">
+    <img src="assets/hero-xreal.jpg" width="1600" height="800" alt="深蓝色调下的一副 AR 眼镜特写，镜腿印有 SOUND BY BOSE，镜片反射冷蓝光">
+  </div>
+  <div class="hero__in">
+    <div class="hero__box">
+      <p class="eyebrow"><i></i>XREAL<span>／原 Nreal · 消费级 AR</span></p>
+      <h1>十年，把一块屏<br>塞进<em>一副眼镜</em>。</h1>
+      <p class="lede">2017 年在北京成立，团队来自 Magic Leap、Google、AMD。它做的是同一件事的第十年：让人在鼻梁上戴一块 130 英寸的屏，重量不超过一副墨镜。<b>2026 年 4 月，它把招股书递到了港交所</b>——这是国内消费级 AR 第一次把账本摊开给人看。</p>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <ul class="stats">
+    <li><span class="v">5.16<i>亿元</i></span><span class="k">2025 年营收，同比 +30.8%</span></li>
+    <li><span class="v">35.2<i>%</i></span><span class="k">毛利率，上年为 22.1%</span></li>
+    <li><span class="v">27.0<i>%</i></span><span class="k">全球 AR 眼镜销售收入份额（艾瑞，2025）</span></li>
+    <li><span class="v">13.4<i>万台</i></span><span class="k">2025 年 AR 眼镜销量</span></li>
+  </ul>
+
+  <section>
+    <div class="head">
+      <span class="num">01</span>
+      <h2>一家把十年压在「厚度」上的公司<span>／2017—2026</span></h2>
+    </div>
+    <div class="cols">
+      <div>
+        <p class="t">创始团队来自 Magic Leap、Google 和 AMD，创始人徐驰。<b>2019 年它把 AR 眼镜接到手机上</b>，定义了「插上就能看电影」这个用法——后来整个行业的入门形态都沿着这条线走。</p>
+        <p class="t">十年里它干的最重的一件事，不是算法，是<b>把光学自己做</b>。2020 年在无锡建了专门的 AR 光学模组工厂；2024 年 2 月，总投资 20 亿元的光学显示模组研发制造项目落在苏州昆山。做整机的公司很多，自己拉光学产线的不多。</p>
+        <p class="t">2025 年 10 月，全球总部迁入上海浦东张江——浦东创投投了 2 亿元，并把这件事当成区域产业布局的一步。今天它近 500 人，累计融资超过 4 亿美元，投资方里有阿里、快手、蔚来资本、云锋、红杉、高瓴、顺为、中金资本。</p>
+      </div>
+      <div>
+        <ul class="log">
+          <li><time>2017</time><p>在北京成立，最初叫 Nreal</p></li>
+          <li><time>2019</time><p>首款消费级 AR 眼镜亮相，把 AR 眼镜与手机直连</p></li>
+          <li><time>2020</time><p>无锡自建 AR 光学模组工厂投产</p></li>
+          <li><time>2022</time><p>阿里领投 6000 万美元 C+ 轮；进入美、日、韩、欧市场</p></li>
+          <li><time>2023</time><p>品牌更名 XREAL</p></li>
+          <li><time>2024.02</time><p>20 亿元光学显示模组项目落户昆山</p></li>
+          <li><time>2024.12</time><p>One 系列发布，自研 X1 空间计算芯片上车</p></li>
+          <li><time>2025.10</time><p>全球总部迁入上海浦东张江</p></li>
+          <li><time>2026.01</time><p>再融 1 亿美元，投后估值 10 亿美元</p></li>
+          <li><time>2026.04</time><p>向港交所递交招股书，中金与花旗联席保荐</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">02</span>
+      <h2>招股书里的数<span>／第一次把账本摊开</span></h2>
+    </div>
+    <p class="t" style="max-width:66ch; margin-bottom:clamp(22px,3.5vh,32px)">消费级 AR 讲了十年故事，这是第一次有公司把亏损、毛利、单价、复购口径一起交出来。四个数字值得盯住。</p>
+    <div class="fin">
+      <div class="row">
+        <span class="k">营收</span>
+        <span class="v">5.16 亿元</span>
+        <span class="d">同比 <span class="up">+30.8%</span>；但同期销量只涨了 7%——增长主要来自卖得更贵，不是卖得更多</span>
+      </div>
+      <div class="row">
+        <span class="k">毛利率</span>
+        <span class="v">35.2%</span>
+        <span class="d">从 22.1% 提升 13 个百分点，自研光学与芯片开始摊薄成本</span>
+      </div>
+      <div class="row">
+        <span class="k">净亏损</span>
+        <span class="v">4.56 亿元</span>
+        <span class="d">上年为 7.09 亿元，<span class="up">收窄 36%</span>；仍在亏损，但曲线在往下走</span>
+      </div>
+      <div class="row">
+        <span class="k">平均售价</span>
+        <span class="v">3,013 元</span>
+        <span class="d">上年 2,466 元，<span class="up">+22%</span>；One 系列卖出 11.1 万台，撑起大半收入</span>
+      </div>
+      <div class="row">
+        <span class="k">海外收入占比</span>
+        <span class="v">71%</span>
+        <span class="d">美国 36.9%、日本 14.6%、欧洲 13.8%；渠道覆盖 40 多个国家和地区</span>
+      </div>
+    </div>
+    <p class="note">数据来源：XREAL 港交所招股书（2026-04-01 递表）及公开报道整理。</p>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">03</span>
+      <h2>产品矩阵<span>／从 1,699 到 1,499 美元，一条价格带全铺满</span></h2>
+    </div>
+    <p class="t" style="max-width:66ch; margin-bottom:clamp(22px,3.5vh,32px)">2026 年它一口气开了四条线：往下探的 xbx、面向游戏的 ROG 联名、中端的 1 Pro+，以及往上顶的 AURA。这是它第一次把价格带从千元铺到万元。</p>
+
+    <div class="prods">
+      <article class="prod">
+        <div class="prod__img"><img src="assets/p-one-pro.png" width="516" height="640" alt="XREAL One Pro AR 眼镜产品图，黑色镜框配茶色镜片"></div>
+        <div class="prod__b">
+          <h3>One Pro</h3>
+          <span class="sub">旗舰 · 自研 X1 芯片</span>
+          <p>57° 视场、700 尼特入眼亮度、120Hz。X1 把 3DoF 悬停和低延迟做进眼镜本体，不依赖外接盒子。</p>
+          <span class="px">国内 4,299 元</span>
+        </div>
+      </article>
+
+      <article class="prod">
+        <div class="prod__img"><img src="assets/p-xbx-a01plus.png" width="516" height="640" alt="XREAL xbx a01+ AR 眼镜产品图，银灰镜框配蓝色镜片与荧光绿镜腿"></div>
+        <div class="prod__b">
+          <h3>xbx a01+</h3>
+          <span class="sub">X by XREAL · 入门线</span>
+          <p>向下探价的子品牌，瞄准第一次买 AR 眼镜的人。a01 售价 1,699 元，a01+ 为 1,799 元。</p>
+          <span class="px">1,699 — 1,799 元</span>
+        </div>
+      </article>
+
+      <article class="prod">
+        <div class="prod__img"><img src="assets/p-rog-r1.png" width="516" height="640" alt="ROG XREAL R1 AR 眼镜产品图，黑色镜框，镜腿上有红色 ROG 标识"></div>
+        <div class="prod__b">
+          <h3>ROG XREAL R1</h3>
+          <span class="sub">联名 · 游戏场景</span>
+          <p>与玩家国度 ROG 联合开发，接掌机与主机做随身大屏。2026 年 6 月 1 日起全球发货。</p>
+          <span class="px">2026.06 全球上市</span>
+        </div>
+      </article>
+    </div>
+    <p class="note">另有 XREAL 1 Pro+（599 美元）与 Air 系列入门机型。产品图源：XREAL 官网。</p>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">04</span>
+      <h2>AURA：一次三方押注<span>／Google ＋ 高通 ＋ XREAL</span></h2>
+    </div>
+    <div class="aura">
+      <h3>把操作系统交给 Google，把算力交给高通，自己做最难的那部分</h3>
+      <div class="three">
+        <div>
+          <b>Google</b>
+          <span>Android XR 系统 + Gemini 模型，开发者生态与应用入口</span>
+        </div>
+        <div>
+          <b>Qualcomm</b>
+          <span>Snapdragon Reality Elite 平台，端侧跑大模型与空间计算</span>
+        </div>
+        <div>
+          <b>XREAL</b>
+          <span>整机、光学模组、空间感知与显示——十年攒下来的那部分</span>
+        </div>
+      </div>
+      <p class="line">70° 视场、整机不到 <b>95 克</b>、双 6DoF 加手部追踪，通过计算 puck 跑 Android XR。2026 年 10 月 28 日在美、加、日、韩开放订购，<b>首发价 1,099 美元</b>（至年底），常规价 1,279 / 1,499 美元，11 月中旬起发货。<br><br>这台机器的意义不在参数。它是第一个把「AR 眼镜」正式接进一个主流操作系统生态的消费产品——如果 Android XR 成立，XREAL 就是那个从第一天就在的主力硬件伙伴。</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">05</span>
+      <h2>它到底排第几<span>／换个口径，名次就变</span></h2>
+    </div>
+    <p class="t" style="max-width:68ch; margin-bottom:clamp(20px,3vh,28px)">这件事得说清楚，因为不同机构的口径差得很远。<b>在「AR 眼镜 / 空间显示」这个细分里，XREAL 是头部</b>；一旦把不带显示的 AI 眼镜、把 VR/MR 头显一起算进大盘，名次就往下掉——Meta 是绝对的第一，雷鸟在出货量上已经超过它。</p>
+    <div class="share">
+      <div class="row">
+        <span class="nm">Meta</span>
+        <span class="pc">45.7%</span>
+        <span class="bar"><i style="width:45.7%"></i></span>
+      </div>
+      <div class="row">
+        <span class="nm">RayNeo 雷鸟</span>
+        <span class="pc">12.0%</span>
+        <span class="bar"><i style="width:12%"></i></span>
+      </div>
+      <div class="row me">
+        <span class="nm">XREAL</span>
+        <span class="pc">8.4%</span>
+        <span class="bar"><i style="width:8.4%"></i></span>
+      </div>
+      <div class="row">
+        <span class="nm">VITURE</span>
+        <span class="pc">7.5%</span>
+        <span class="bar"><i style="width:7.5%"></i></span>
+      </div>
+      <div class="row">
+        <span class="nm">Rokid</span>
+        <span class="pc">6.6%</span>
+        <span class="bar"><i style="width:6.6%"></i></span>
+      </div>
+    </div>
+    <p class="note">口径一：IDC 2026 年 Q2 全球 AR/VR 头显与眼镜出货量份额（含 VR，分母最大）。<br>口径二：招股书引用艾瑞咨询，2025 年全球 AR 眼镜市场按销售收入计 XREAL 份额 27.0%、按销量计 24.8%，位列第一。<br>两个口径不能相加，看到「第一」时先问一句：算的是哪个池子。</p>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">06</span>
+      <h2>现在在找的人<span>／光学是硬骨头</span></h2>
+    </div>
+    <p class="t" style="max-width:66ch">从公开在招的岗位看，最难补的是光学这一支：衍射光波导、自由曲面、光机设计，以及要把这些做进量产线的工艺人。</p>
+    <ul class="roles">
+      <li><b>光学研发工程师</b><span>北京 / 上海 · 几何光学 · AR 光机</span></li>
+      <li><b>光学研发工程师（光栅设计）</b><span>北京（半年后转上海）· 衍射光波导</span></li>
+      <li><b>SLAM / 空间感知算法</b><span>北京 / 上海</span></li>
+      <li><b>硬件产品与整机结构</b><span>北京 / 上海</span></li>
+    </ul>
+    <p class="note">以上来自公开招聘信息（官网、校招与主流招聘平台）。具体职级、汇报线与薪酬带宽单独聊。</p>
+
+    <div class="cta">
+      <a class="btn btn--fill" href="mailto:1045321663@qq.com?subject=%E5%BA%94%E8%81%98%20XREAL">发邮件聊聊</a>
+      <a class="btn" href="weixin://">微信 Ljhh-HH6666</a>
+    </div>
+  </section>
+
+  <footer>
+    <p><b>XREAL（原 Nreal）</b> · 本页由猎头 Lionel 受客户委托整理，非企业官方页面。数据引自港交所招股书、IDC 与艾瑞公开数据、官方发布会与行业报道，整理截至 2026-11-02。产品图取自 XREAL 官网，版权归其所有，仅用于人才沟通说明。</p>
+    <p style="text-align:right">猎头 Lionel，受客户委托寻访<br>微信 Ljhh-HH6666 ／ 1045321663@qq.com</p>
+  </footer>
+</div>
+
+</body>
+</html>
