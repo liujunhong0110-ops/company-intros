@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>众擎机器人 ENGINEAI｜先把身体练到极致，再补上大脑</title>
+<meta name="description" content="众擎机器人（EngineAI）企业介绍：2023 年 10 月成立于深圳，2026 年 4 月完成 2 亿美元 B 轮、估值破百亿；前小鹏副总裁李力耘出任 CTO；T800 售价 18 万元起，深圳红花岭与郑州云智两座万台级基地推进中。资料截至 2026-11-05。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23111'/><path d='M16 7l7 5v8l-7 5-7-5v-8z' fill='none' stroke='%23E4002B' stroke-width='2.4'/></svg>">
+<style>
+  :root{
+    --bg:#f7f7f8; --card:#fff; --ink:#111214; --ink-2:#4a4d55; --ink-3:#8b8f99;
+    --line:#e4e5e9; --line-2:#d0d2d9;
+    --red:#e4002b; --red-2:#ff2d4d;
+    --sans:"Microsoft YaHei","PingFang SC","Hiragino Sans GB",-apple-system,system-ui,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg); color:var(--ink); font-family:var(--sans);
+    -webkit-font-smoothing:antialiased; line-height:1.72; overflow-x:hidden}
+  .wrap{width:min(1080px,90vw); margin:0 auto}
+
+  /* hero */
+  .hero{background:#0d0e10; color:#fff; position:relative; overflow:hidden}
+  .hero::before{
+    content:""; position:absolute; right:-10%; top:-30%; width:70%; height:170%;
+    background:radial-gradient(closest-side, rgba(228,0,43,.5), transparent 72%);
+    filter:blur(10px);
+  }
+  .hero::after{
+    content:""; position:absolute; left:0; right:0; bottom:0; height:1px;
+    background:linear-gradient(90deg, var(--red), transparent 60%);
+  }
+  .hero__in{width:min(1080px,90vw); margin:0 auto; position:relative; z-index:2;
+    padding:clamp(60px,11vh,104px) 0 clamp(52px,9vh,88px)}
+  .eyebrow{display:flex; align-items:center; gap:11px; font-family:var(--mono); font-size:11px;
+    letter-spacing:.2em; color:rgba(255,255,255,.5); text-transform:uppercase}
+  .eyebrow i{width:20px; height:1px; background:var(--red); display:block}
+  h1{margin-top:22px; font-size:clamp(32px,5.2vw,58px); line-height:1.14; font-weight:800; letter-spacing:-.025em}
+  h1 em{font-style:normal; color:var(--red-2)}
+  .lede{margin-top:24px; font-size:15px; line-height:1.9; color:rgba(255,255,255,.72); max-width:56ch}
+  .lede b{color:#fff; font-weight:600}
+
+  /* stats */
+  .stats{list-style:none; display:grid; grid-template-columns:repeat(4,1fr); background:var(--card);
+    border-bottom:1px solid var(--line)}
+  .stats li{padding:26px clamp(12px,2vw,24px); border-right:1px solid var(--line)}
+  .stats li:last-child{border-right:0}
+  .stats .v{display:block; font-size:clamp(20px,2.6vw,28px); font-weight:800; letter-spacing:-.03em;
+    font-variant-numeric:tabular-nums; line-height:1.2; color:var(--ink)}
+  .stats .v i{font-style:normal; font-size:.44em; color:var(--ink-3); margin-left:4px; font-weight:600}
+  .stats .k{display:block; margin-top:9px; font-size:12px; color:var(--ink-3); line-height:1.6}
+
+  section{padding:clamp(48px,7.5vh,80px) 0; border-top:1px solid var(--line)}
+  .head{display:flex; gap:18px; align-items:baseline; margin-bottom:clamp(22px,3.6vh,34px); flex-wrap:wrap}
+  .num{font-family:var(--mono); font-size:12px; color:var(--red); letter-spacing:.12em; padding-top:7px; font-weight:700}
+  h2{font-size:clamp(22px,3vw,32px); font-weight:800; letter-spacing:-.02em; line-height:1.28}
+  h2 span{color:var(--ink-3); font-weight:400}
+  .cols{display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(24px,4vw,52px)}
+  p.t{font-size:14.5px; color:var(--ink-2); line-height:1.92}
+  p.t + p.t{margin-top:15px}
+  p.t b{color:var(--ink); font-weight:700}
+
+  /* 融资表 */
+  .raise{margin-top:6px; border-top:2px solid var(--ink)}
+  .raise .row{display:grid; grid-template-columns:118px 1fr 1.3fr; gap:16px; padding:16px 0;
+    border-bottom:1px solid var(--line); align-items:baseline}
+  .raise .when{font-family:var(--mono); font-size:12.5px; color:var(--ink); font-weight:600}
+  .raise .amt{font-size:14px; font-weight:750; color:var(--red)}
+  .raise .who{font-size:12.5px; color:var(--ink-2); line-height:1.68}
+
+  /* 产品卡 */
+  .prods{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
+  .prod{background:var(--card); border:1px solid var(--line); padding:20px 18px 22px; position:relative}
+  .prod::before{content:""; position:absolute; left:0; top:0; width:100%; height:3px; background:var(--ink)}
+  .prod--flag::before{background:var(--red)}
+  .prod h3{font-size:17px; font-weight:800; letter-spacing:-.01em}
+  .prod .sub{font-family:var(--mono); font-size:10px; letter-spacing:.12em; color:var(--ink-3); margin-top:6px; text-transform:uppercase}
+  .prod p{font-size:12.5px; color:var(--ink-2); line-height:1.7; margin-top:10px}
+  .prod .px{font-family:var(--mono); font-size:12.5px; font-weight:700; margin-top:12px; color:var(--ink)}
+  .prod--flag .px{color:var(--red)}
+
+  /* 人物 */
+  .person{background:var(--card); border:1px solid var(--line); border-left:3px solid var(--red);
+    padding:clamp(22px,3vw,34px); display:grid; grid-template-columns:1fr 1fr; gap:clamp(20px,3vw,40px)}
+  .person h3{font-size:clamp(20px,2.6vw,26px); font-weight:800; letter-spacing:-.02em}
+  .person .role{font-family:var(--mono); font-size:11px; letter-spacing:.14em; color:var(--red);
+    margin-top:8px; text-transform:uppercase}
+  .person ul{list-style:none; font-size:13.5px; color:var(--ink-2)}
+  .person ul li{position:relative; padding-left:15px; margin-top:10px; line-height:1.72}
+  .person ul li::before{content:""; position:absolute; left:0; top:.68em; width:5px; height:1px; background:var(--red)}
+
+  /* 产能 */
+  .plants{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:6px}
+  .plant{background:var(--card); border:1px solid var(--line); padding:20px}
+  .plant .tag{font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; color:var(--red); font-weight:600}
+  .plant h4{font-size:16px; font-weight:750; margin-top:8px}
+  .plant p{font-size:12.5px; color:var(--ink-2); line-height:1.7; margin-top:8px}
+
+  /* 场景列表 */
+  .scenes{list-style:none; margin-top:6px; border-top:1px solid var(--line);
+    display:grid; grid-template-columns:1fr 1fr; gap:0 clamp(20px,3vw,40px)}
+  .scenes li{padding:13px 0; border-bottom:1px solid var(--line); display:flex; gap:12px; align-items:baseline}
+  .scenes b{font-size:13.5px; font-weight:700; flex-shrink:0; width:74px}
+  .scenes span{font-size:12.5px; color:var(--ink-2); line-height:1.65}
+
+  /* 引文 */
+  .quote{margin-top:clamp(24px,4vh,34px); padding:22px 26px; background:var(--card);
+    border:1px solid var(--line); border-left:3px solid var(--ink); font-size:14px; color:var(--ink-2); line-height:1.9}
+  .quote b{color:var(--ink)}
+
+  /* 岗位 */
+  .roles{list-style:none; margin-top:6px; border-top:1px solid var(--line);
+    display:grid; grid-template-columns:1fr 1fr; gap:0 clamp(20px,3vw,40px)}
+  .roles li{padding:13px 0; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; gap:12px; align-items:baseline}
+  .roles b{font-size:13.5px; font-weight:650}
+  .roles span{font-family:var(--mono); font-size:10.5px; color:var(--ink-3); white-space:nowrap}
+
+  .cta{display:flex; gap:13px; flex-wrap:wrap; margin-top:clamp(26px,4vh,36px)}
+  .btn{display:inline-flex; align-items:center; padding:13px 24px; font-size:13.5px; text-decoration:none;
+    border:1px solid var(--line-2); color:var(--ink); transition:.2s; letter-spacing:.02em; background:transparent}
+  .btn:hover{border-color:var(--ink); background:#fff}
+  .btn--fill{background:var(--red); border-color:var(--red); color:#fff; font-weight:700}
+  .btn--fill:hover{background:#c50026; border-color:#c50026}
+
+  footer{border-top:1px solid var(--line); padding:clamp(30px,5vh,46px) 0 clamp(28px,4vh,40px);
+    display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap;
+    font-size:11.5px; color:var(--ink-3); line-height:1.85}
+  footer b{color:var(--ink-2); font-weight:600}
+  footer p{max-width:64ch}
+
+  @media (max-width:900px){
+    .stats{grid-template-columns:1fr 1fr}
+    .cols,.person,.plants,.scenes,.roles,.prods{grid-template-columns:1fr}
+    .prods{grid-template-columns:1fr 1fr}
+    .raise .row{grid-template-columns:1fr; gap:5px}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero__in">
+    <p class="eyebrow"><i></i>ENGINEAI<span>／深圳 · 2023 年成立</span></p>
+    <h1>先把身体练到极致，<br>再<em>补上大脑</em>。</h1>
+    <p class="lede">2023 年 10 月成立于深圳。用一段自然步态和一次前空翻出圈，三年做到百亿估值、两座万台级基地。2026 年 4 月，前小鹏副总裁、自动驾驶一号位<b>李力耘出任 CTO</b>——这家被叫作「体能之王」的公司，开始补最硬的那一块。</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <ul class="stats">
+    <li><span class="v">2<i>亿美元</i></span><span class="k">2026 年 4 月 B 轮，估值破百亿</span></li>
+    <li><span class="v">18<i>万元起</i></span><span class="k">T800 全尺寸旗舰定价</span></li>
+    <li><span class="v">2<i>座基地</i></span><span class="k">深圳红花岭 + 郑州云智，万台级</span></li>
+    <li><span class="v">20<i>亿+</i></span><span class="k">URKL 格斗联赛揭幕赛全球曝光</span></li>
+  </ul>
+
+  <section>
+    <div class="head">
+      <span class="num">01</span>
+      <h2>一个人，十年<span>／从三无到百亿</span></h2>
+    </div>
+    <div class="cols">
+      <div>
+        <p class="t">创始人赵同阳，90 后连续创业者。2016 年在深圳起步时，他自己的说法是「三无」：无技术、无资金、无团队——市面上找不到能拆的样机，就从电商买回机器人模型放在床头研究。</p>
+        <p class="t">2020 年，他的四足机器人把这类产品的市场主流价从十几二十万拉到 <b>3 万至 4 万元</b>；同年与何小鹏共同成立小鹏鹏行智能。2023 年 10 月，他创办众擎，名字取「众志成城、擎起未来」。</p>
+        <p class="t">2026 年 1 月完成股份制改造，更名深圳众擎机器人科技股份有限公司。团队 150 余人，核心来自清华、香港大学、UC Berkeley、CMU、苏黎世联邦理工，总部深圳、设北京分公司，布局广东、河南、江西等 6 地。</p>
+      </div>
+      <div>
+        <div class="quote" style="margin-top:0">
+          <b>「人形机器人的核心逻辑不是降价，而是提升价值。如果产品能达到用户预期，人们会愿意买单；一味追求低价，会把高科技行业做成低端产品。」</b><br>
+          <span style="font-size:12px;color:var(--ink-3)">—— 赵同阳</span>
+        </div>
+        <p class="t" style="margin-top:18px">他对成本曲线的判断是：三年前整机成本 200–300 万元，现在已经到 <b>10–20 万元</b>，未来的目标是成本 5–7 万元、售价 10 万元左右——比中低端小轿车更便宜。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">02</span>
+      <h2>一年四轮，估值破百亿<span>／融资序列</span></h2>
+    </div>
+    <p class="t" style="max-width:66ch; margin-bottom:clamp(20px,3vh,28px)">从 2025 年 4 月到 2026 年 4 月，这家公司做了四轮融资、三轮在一年内完成。节奏之密，在人形机器人赛道里少见。</p>
+    <div class="raise">
+      <div class="row">
+        <span class="when">2025.04</span>
+        <span class="amt">近 3 亿元</span>
+        <span class="who">Pre-A 轮 + Pre-A+ 轮</span>
+      </div>
+      <div class="row">
+        <span class="when">2025.07</span>
+        <span class="amt">近 10 亿元</span>
+        <span class="who">Pre-A++ 轮 + A1 轮，其中 A1 轮由<b>京东</b>领投</span>
+      </div>
+      <div class="row">
+        <span class="when">2025.11</span>
+        <span class="amt">A1+ / A2 轮</span>
+        <span class="who">产业资本、地方国资与市场化投资机构参与</span>
+      </div>
+      <div class="row">
+        <span class="when">2026.04</span>
+        <span class="amt">2 亿美元 · 估值破百亿</span>
+        <span class="who"><b>河南投资集团汇融基金</b>继 A2 轮后再度领投，<b>立讯精密</b>战略入局并联合领投；中创智领、基石资本、龙岗金控、金谷资本、财通资本、多伦科技、能量守恒、硬核坚果、北京昌发展基金、全昇创投、STAR SINO 等参与；黄浦江资本、银柏投资、星航资本、星源资本、财鑫资本、汇勤资本、普超资本等老股东跟投</span>
+      </div>
+    </div>
+    <p class="t" style="margin-top:20px">这一轮选投资方的标准变了。赵同阳的说法是「以前有钱就行，现在更看重能带来互补资源的机构——生产制造、应用落地场景、销售渠道」。立讯精密的入局就是这个逻辑：它同时是 T800 进厂的客户方。</p>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">03</span>
+      <h2>四条产品线<span>／从 3.85 万到 18 万</span></h2>
+    </div>
+    <div class="prods">
+      <article class="prod">
+        <h3>SA01</h3>
+        <span class="sub">科研教育</span>
+        <p>把价格打到教育市场的入门机型，让高校和实验室买得起。</p>
+        <span class="px">3.85 万元</span>
+      </article>
+      <article class="prod">
+        <h3>SE01</h3>
+        <span class="sub">自然步态旗舰</span>
+        <p>全球首例人形机器人自然步态行走，告别「屈膝小碎步」，一段视频全网刷屏。</p>
+        <span class="px">2024 年发布</span>
+      </article>
+      <article class="prod">
+        <h3>PM01</h3>
+        <span class="sub">开源通用平台</span>
+        <p>全球首例人形机器人前空翻；跑步、舞蹈等高动态动作。开源平台，供开发者二次开发。</p>
+        <span class="px">8.8 万元起</span>
+      </article>
+      <article class="prod prod--flag">
+        <h3>T800</h3>
+        <span class="sub">全尺寸旗舰 · 2025.12</span>
+        <p>身高 1.73m / 自重 75kg；峰值关节力矩 450N·m、瞬时功率 14,000W；自研率超 90%。</p>
+        <span class="px">18 万元起</span>
+      </article>
+    </div>
+    <p class="t" style="margin-top:22px">技术上的分野在这儿：全球少数同时掌握<b>行星准直驱、谐波力控、滚珠丝杠直线关节</b>三条路线的公司，自研率超过 90%。赵同阳的产品策略是聚焦——「只聚焦一两款核心产品」，目前就是 PM01 和 T800，后者要打造成爆款旗舰。</p>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">04</span>
+      <h2>李力耘出任 CTO<span>／补大脑的那一步</span></h2>
+    </div>
+    <p class="t" style="max-width:68ch; margin-bottom:clamp(20px,3vh,28px)">2026 年 4 月 21 日，众擎宣布李力耘博士出任首席技术官。这可能是今年国内自动驾驶向具身智能输出最重的一次人才转移。</p>
+    <div class="person">
+      <div>
+        <h3>李力耘</h3>
+        <div class="role">CTO · 2026.04 加入</div>
+        <ul>
+          <li>清华大学电子工程系本科，纽约大学计算机系博士</li>
+          <li>前小鹏汽车副总裁、自动驾驶「一号位」，主导团队「产品 + 技术」的 AI 化转型与组织升级</li>
+          <li>更早任 LinkedIn 美国总部、百度美国 Apollo、京东 JDX 智慧物流实验室技术架构师与高级专家</li>
+          <li>曾管理超 1,000 人软硬件综合研发团队，推动组织从模块化开发转向「数据、算力、模型」全链路</li>
+        </ul>
+      </div>
+      <div>
+        <p class="t" style="margin-top:0">他接的是具身智能技术的全生命周期：从前沿探索、人形机器人产品定义，到工程体系构建与规模化量产落地。</p>
+        <p class="t">战略含义很直接——众擎要从「体能之王」走到<b>本体 + 小脑 + 具身大脑</b>的三层协同。做法是把自动驾驶那套「工业化 AI」打法搬过来：原生多模态驱动、大小脑与神经末梢协同的全集成架构，以及一个能持续进化的「模型工厂」。</p>
+        <p class="t">资源配比也随之翻转：过去两年 60% 研发资源投硬件，<b>2026 年 60% 投 AI</b>。赵同阳的原话是「硬件已经不错了，今年要大力把钱投在『大脑』上」。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">05</span>
+      <h2>从测试机到万台级<span>／产能这条线</span></h2>
+    </div>
+    <p class="t" style="max-width:66ch; margin-bottom:clamp(20px,3vh,28px)">制造业出身的团队，产能爬坡的节奏很清楚：2024 年完成首台测试机，2025 年 PM01 做到百台级小规模生产，2026 年两座基地同时启动。</p>
+    <div class="plants">
+      <div class="plant">
+        <span class="tag">2026.05</span>
+        <h4>深圳南山 · 红花岭基地</h4>
+        <p>智能制造基地启动，建设万台级规模化交付能力。这是总部所在地的主力产线。</p>
+      </div>
+      <div class="plant">
+        <span class="tag">2026.07</span>
+        <h4>郑州高新区 · 云智基地</h4>
+        <p>全球生产制造基地，与红花岭开展多地产能协同，覆盖研发验证、工程转化、批量生产、质量控制与市场交付。背后是河南投资集团的产业资源。</p>
+      </div>
+    </div>
+    <p class="t" style="margin-top:20px">出货口径：2025 年双足机器人出货仅数百台规模，2026 年赵同阳预计提升至<b>数千台</b>。年产能 10 万台的智能制造基地也已同步启动。</p>
+    <p class="t">他没有盲目扩产。理由说得很实在：行业产品几乎每半年升级一次，如果半年内大量生产、扩大产能，很可能「产品没卖完、市场就出现更高级的产品」，库存和竞争压力会同时压过来。</p>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">06</span>
+      <h2>谁在用它<span>／从时装周到工厂</span></h2>
+    </div>
+    <ul class="scenes">
+      <li><b>工业</b><span>T800 已进入立讯精密苏州工厂，承担上下物料与搬运作业</span></li>
+      <li><b>零售</b><span>迪卡侬门店，PM01 承担商品导购与消费者互动</span></li>
+      <li><b>公共</b><span>深圳科技馆：智能接待、导览、答疑与互动服务</span></li>
+      <li><b>文娱</b><span>巴黎时装周、华美协 100 周年庆典、京东晚会、淘宝红人之夜，承担舞台演出与现场互动</span></li>
+      <li><b>安防</b><span>与多伦科技合作「擎安机器人」落子南京建邺，切入智慧警务；与锋物科技合作「通用具身智能机器人 + AI 大脑」做安防 4.0</span></li>
+      <li><b>制造协同</b><span>与中创智领战略签约，开拓「人工智能 + 制造」场景</span></li>
+    </ul>
+    <p class="t" style="margin-top:22px">技术侧披露的一组数是：<b>2 小时实机部署、低样本训练、长程动作成功率超过 98%</b>——来自软硬件协同架构。数据再按「数据飞轮」回流到本体、运动控制与模型训练。</p>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">07</span>
+      <h2>URKL：把比赛当测试场<span>／格斗只占 10% 资源</span></h2>
+    </div>
+    <div class="cols">
+      <div>
+        <p class="t">2026 年 7 月，众擎作为发起及主办单位办了 URKL 全球人形机器人自由格斗联赛揭幕赛，T800 是赛事专属机型，全球曝光量突破 20 亿。</p>
+        <p class="t">比赛要求机器人连续完成移动、攻击、防守、碰撞、跌倒和<b>自主起身</b>——这恰好是真实场景里最难的一组动作。众擎把它当作产品测试场：场上形成的本体、关节与运动控制数据全部回流研发，打法叫「以赛促研、以赛促产」。</p>
+      </div>
+      <div>
+        <p class="t">需要说清楚的是，格斗在公司内部的资源投入大概只有 <b>10%</b>。赵同阳说，更多资源投在了让机器人走进商业、工厂和家庭。</p>
+        <p class="t">外界认知和内部重心之间有落差，这在判断这家公司真实进度时值得留意：它靠格斗出圈，但真正在铺的是场景落地和量产。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">08</span>
+      <h2>路线判断<span>／先吃 40% 的粗活</span></h2>
+    </div>
+    <div class="cols">
+      <div>
+        <p class="t">落地顺序他分三步：先是<b>文娱和科研教育</b>——文娱需求远未开发完，全球市场只打开了五分之一到四分之一；再是<b>工业和服务业</b>，需求量比娱乐至少大两个数量级；最后才是<b>家庭</b>，可能还要 3 到 5 年。</p>
+        <p class="t">工厂里他拆得更细：走访大量工厂后发现，<b>60% 是精细活，40% 是粗活</b>——搬运、上下料这些。「我们先解决这 40% 的粗活，量已经足够大了。」</p>
+      </div>
+      <div>
+        <p class="t">未来两三年重心会压在工业和服务业，3–5 年后才逐步进家庭。这个顺序背后是一笔账：工业领域传统机器人做了几十年，市值加起来可能还不如一家新势力车企；只有家庭才有足够高的天花板。</p>
+        <p class="t">所以在硬件上他们每 3–4 个月迭代一次（今年还要再升级两三次），同时在 AI 侧大举投入。两条腿的节奏不一样，但都要跟得上。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">09</span>
+      <h2>在找的人</h2>
+    </div>
+    <p class="t" style="max-width:66ch">从「体能」转向「体能 + 智能」的过程中，最缺的是能把两边接起来的人。</p>
+    <ul class="roles">
+      <li><b>具身智能 / 大模型</b><span>具身预训练 · 操作大模型</span></li>
+      <li><b>运动控制算法</b><span>运控 · 强化学习 · 高动态</span></li>
+      <li><b>本体结构 / 关节模组</b><span>机械 · 电机 · 传动</span></li>
+      <li><b>软件 / 嵌入式</b><span>系统软件 · 仿真 · 中间件</span></li>
+      <li><b>量产与质量</b><span>制造工程 · 测试 · 供应链</span></li>
+      <li><b>数据与模型工程</b><span>数据飞轮 · 训练 Infra</span></li>
+    </ul>
+
+    <div class="cta">
+      <a class="btn btn--fill" href="mailto:1045321663@qq.com?subject=%E5%BA%94%E8%81%98%20%E4%BC%97%E6%93%8E%E6%9C%BA%E5%99%A8%E4%BA%BA">发邮件聊聊</a>
+      <a class="btn" href="weixin://">微信 Ljhh-HH6666</a>
+    </div>
+  </section>
+
+  <footer>
+    <p><b>众擎机器人 ENGINEAI</b> · 本页由猎头 Lionel 受客户委托整理，非企业官方页面。数据引自公司官网与公开发布、投资方公告、财经媒体报道，整理截至 2026-11-05。融资与产能节点以官方披露为准。</p>
+    <p style="text-align:right">猎头 Lionel，受客户委托寻访<br>微信 Ljhh-HH6666 ／ 1045321663@qq.com</p>
+  </footer>
+</div>
+
+</body>
+</html>
