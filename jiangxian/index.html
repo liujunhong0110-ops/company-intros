@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>将闲科技 LiberAI｜把「力」变成模型能学的东西</title>
+<meta name="description" content="将闲科技（LiberAI）企业介绍：2025 年 12 月成立于北京海淀，清华 00 后博士刘松铭创办，做物理世界模型。10 个月 6 轮融资累计超 10 亿元，Liber-0 Preview 在 RoboDojo 评测登顶。资料截至 2026-11-12。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230b0a18'/><path d='M9 22V10l7 7 7-7v12' stroke='%23a78bfa' stroke-width='2.4' fill='none' stroke-linejoin='round'/></svg>">
+<style>
+  :root{
+    --bg:#0b0a18; --panel:#14122a; --line:rgba(255,255,255,.1); --line-2:rgba(255,255,255,.2);
+    --ink:#f0eefb; --ink-2:#a3a0bd; --ink-3:#6d6a89;
+    --ac:#a78bfa; --ac-2:#c9b6ff;
+    --sans:"Microsoft YaHei","PingFang SC","Hiragino Sans GB",-apple-system,system-ui,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg); color:var(--ink); font-family:var(--sans); -webkit-font-smoothing:antialiased;
+    line-height:1.72; overflow-x:hidden}
+  .wrap{width:min(1060px,90vw); margin:0 auto}
+
+  .hero{position:relative; overflow:hidden; border-bottom:1px solid var(--line);
+    background:radial-gradient(110% 90% at 82% 0%, rgba(167,139,250,.18), transparent 60%)}
+  .hero::after{content:""; position:absolute; left:0; right:0; bottom:0; height:1px;
+    background:linear-gradient(90deg, var(--ac), transparent 55%)}
+  .hero__in{width:min(1060px,90vw); margin:0 auto;
+    padding:clamp(60px,11vh,104px) 0 clamp(48px,8vh,80px); position:relative; z-index:2}
+  .eyebrow{display:flex; align-items:center; gap:11px; font-family:var(--mono); font-size:11px;
+    letter-spacing:.2em; color:rgba(255,255,255,.5); text-transform:uppercase}
+  .eyebrow i{width:20px; height:1px; background:var(--ac); display:block}
+  h1{margin-top:22px; font-size:clamp(32px,5.2vw,56px); line-height:1.14; font-weight:800; letter-spacing:-.025em}
+  h1 em{font-style:normal; color:var(--ac-2)}
+  .lede{margin-top:24px; font-size:15px; line-height:1.9; color:rgba(255,255,255,.72); max-width:58ch}
+  .lede b{color:#fff; font-weight:600}
+
+  .stats{list-style:none; display:grid; grid-template-columns:repeat(4,1fr); border-bottom:1px solid var(--line)}
+  .stats li{padding:26px clamp(12px,2vw,24px); border-right:1px solid var(--line)}
+  .stats li:last-child{border-right:0}
+  .stats .v{display:block; font-size:clamp(20px,2.6vw,28px); font-weight:800; letter-spacing:-.03em;
+    font-variant-numeric:tabular-nums; line-height:1.2}
+  .stats .v i{font-style:normal; font-size:.44em; color:var(--ink-3); margin-left:4px; font-weight:600}
+  .stats .k{display:block; margin-top:9px; font-size:12px; color:var(--ink-3); line-height:1.6}
+
+  section{padding:clamp(46px,7.5vh,78px) 0; border-top:1px solid var(--line)}
+  .head{display:flex; gap:18px; align-items:baseline; margin-bottom:clamp(22px,3.6vh,34px); flex-wrap:wrap}
+  .num{font-family:var(--mono); font-size:12px; color:var(--ac); letter-spacing:.12em; padding-top:7px; font-weight:700}
+  h2{font-size:clamp(22px,3vw,32px); font-weight:800; letter-spacing:-.02em; line-height:1.28}
+  h2 span{color:var(--ink-3); font-weight:400}
+  .cols{display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(24px,4vw,52px)}
+  p.t{font-size:14.5px; color:var(--ink-2); line-height:1.92}
+  p.t + p.t{margin-top:15px}
+  p.t b{color:var(--ink); font-weight:700}
+
+  .tbl{width:100%; border-collapse:collapse; margin-top:6px; border-top:1px solid var(--line)}
+  .tbl td{padding:14px 0; border-bottom:1px solid var(--line); font-size:13.5px; color:var(--ink-2);
+    vertical-align:top; line-height:1.75}
+  .tbl td:first-child{width:24%; color:var(--ink); font-weight:700; font-size:13px; padding-right:18px}
+  .tbl td b{color:var(--ink)}
+
+  /* 数据金字塔 */
+  .pyr{display:grid; gap:10px; margin-top:6px}
+  .pyr .lv{background:var(--panel); border:1px solid var(--line); padding:16px 20px; position:relative}
+  .pyr .lv:nth-child(1){width:100%}
+  .pyr .lv:nth-child(2){width:82%}
+  .pyr .lv:nth-child(3){width:64%}
+  .pyr .lv b{font-size:14px; font-weight:750}
+  .pyr .lv span{display:block; font-size:12.5px; color:var(--ink-2); margin-top:6px; line-height:1.7}
+  .pyr .lv i{position:absolute; right:16px; top:16px; font-family:var(--mono); font-size:11px; color:var(--ac); font-style:normal}
+
+  /* 融资 */
+  .raise{margin-top:6px; border-top:2px solid var(--ac)}
+  .raise .row{display:grid; grid-template-columns:96px 1.1fr 1.5fr; gap:16px; padding:15px 0;
+    border-bottom:1px solid var(--line); align-items:baseline}
+  .raise .when{font-family:var(--mono); font-size:12px; color:var(--ink); font-weight:600}
+  .raise .rd{font-size:13.5px; font-weight:750; color:var(--ac-2)}
+  .raise .who{font-size:12.5px; color:var(--ink-2); line-height:1.68}
+
+  .risk{background:rgba(255,255,255,.03); border:1px solid var(--line); border-left:3px solid #ffb74d;
+    padding:clamp(20px,2.6vw,28px); margin-top:6px}
+  .risk h3{font-size:16px; font-weight:750; color:#ffcc80}
+  .risk ul{list-style:none; margin-top:14px; font-size:13.5px; color:var(--ink-2)}
+  .risk ul li{position:relative; padding-left:16px; margin-top:11px; line-height:1.78}
+  .risk ul li::before{content:""; position:absolute; left:0; top:.7em; width:5px; height:1px; background:#ffb74d}
+  .risk b{color:var(--ink)}
+
+  .quote{margin-top:22px; padding:20px 24px; background:var(--panel); border:1px solid var(--line);
+    font-size:14px; color:var(--ink-2); line-height:1.9}
+  .quote b{color:var(--ink)}
+
+  .roles{list-style:none; margin-top:6px; border-top:1px solid var(--line)}
+  .roles li{padding:14px 0; border-bottom:1px solid var(--line); display:flex; justify-content:space-between;
+    gap:16px; align-items:baseline; flex-wrap:wrap}
+  .roles b{font-size:14px; font-weight:700}
+  .roles span{font-family:var(--mono); font-size:11px; color:var(--ink-3)}
+
+  .cta{display:flex; gap:13px; flex-wrap:wrap; margin-top:clamp(26px,4vh,36px)}
+  .btn{display:inline-flex; align-items:center; padding:13px 24px; font-size:13.5px; text-decoration:none;
+    border:1px solid var(--line-2); color:var(--ink); transition:.2s; letter-spacing:.02em}
+  .btn:hover{border-color:var(--ink-3); background:rgba(255,255,255,.05)}
+  .btn--fill{background:var(--ac); border-color:var(--ac); color:#0d0820; font-weight:700}
+  .btn--fill:hover{background:var(--ac-2); border-color:var(--ac-2)}
+
+  footer{border-top:1px solid var(--line); padding:clamp(30px,5vh,46px) 0 clamp(28px,4vh,40px);
+    display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap;
+    font-size:11.5px; color:var(--ink-3); line-height:1.85}
+  footer b{color:var(--ink-2); font-weight:600}
+  footer p{max-width:64ch}
+
+  @media (max-width:900px){
+    .stats{grid-template-columns:1fr 1fr}
+    .cols{grid-template-columns:1fr}
+    .raise .row{grid-template-columns:1fr; gap:5px}
+    .tbl td{display:block; padding:10px 0}
+    .tbl td:first-child{width:auto; padding-bottom:2px}
+    .pyr .lv{width:100%!important}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero__in">
+    <p class="eyebrow"><i></i>LiberAI<span>／北京海淀 · 2025.12</span></p>
+    <h1>把「力」<br>变成模型能学的<em>东西</em>。</h1>
+    <p class="lede">一家成立不到一年的公司，10 个月融了 6 轮、超 10 亿元。创始人刘松铭是清华计算机系的 00 后在读博士。他们的判断是：具身模型泛化不了，不是因为数据不够多，是因为<b>没学会「力是原因、运动是结果」</b>。</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <ul class="stats">
+    <li><span class="v">10<i>亿元+</i></span><span class="k">累计融资，10 个月内 6 轮</span></li>
+    <li><span class="v">4<i>连投</i></span><span class="k">红杉中国从天使轮起连续追加</span></li>
+    <li><span class="v">20<i>自由度</i></span><span class="k">用世界模型控制的灵巧手，不走夹爪路线</span></li>
+    <li><span class="v">No.1</span><span class="k">Liber-0 Preview 在 RoboDojo 官方评测登顶</span></li>
+  </ul>
+
+  <section>
+    <div class="head">
+      <span class="num">01</span>
+      <h2>先看这个人<span>／在创业之前他就做过什么</span></h2>
+    </div>
+    <div class="cols">
+      <div>
+        <p class="t">刘松铭，清华计算机系在读博士，师从视频生成模型领域学者<b>朱军教授</b>。拿过清华本科生特等奖学金（每年仅 10 人），多年保持年级第一，在 ICML、NeurIPS 等顶会发过多篇一作论文。</p>
+        <p class="t">但让投资人下注的不是这些头衔，是他创业前就交出来的东西：<b>RDT-1B</b>（2024）——全球首个用「大规模预训练 + 扩散 Transformer」范式的机器人基座模型，解决双臂操作的数据稀缺与多模态行为分布难题，比 Physical Intelligence 的 PI-0 早约三周。</p>
+        <p class="t">2026 年又发布 <b>RDT-2</b>，是最早使用大规模 UMI（无本体人类数据）预训练范式的具身模型之一。</p>
+      </div>
+      <div>
+        <table class="tbl">
+          <tbody>
+            <tr><td>公司主体</td><td>北京将闲科技有限公司（LiberAI）</td></tr>
+            <tr><td>成立时间</td><td>2025 年 12 月 8 日</td></tr>
+            <tr><td>地点</td><td>北京市海淀区</td></tr>
+            <tr><td>创始人</td><td>刘松铭 · 清华计算机系 00 后在读博士</td></tr>
+            <tr><td>技术路线</td><td>人类 UMI 数据 + 物理世界模型</td></tr>
+            <tr><td>代表性成果</td><td>RDT-1B（2024）、RDT-2（2026）、Liber-0 Preview（2026）</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">02</span>
+      <h2>核心主张<span>／泛化不了，是因为不懂因果</span></h2>
+    </div>
+    <p class="t" style="max-width:68ch">LiberAI 的判断是：当前具身模型泛化性不足的根源，<b>在于缺乏对力和因果关系的建模</b>。模型不理解「力是因、运动状态是果」，就没法像人一样完成精细的长程物理操作。</p>
+    <p class="t" style="max-width:68ch">在这个判断之下，他们与主流路线做了两个区分：不靠纯视频生成，也不靠物理引擎，而是引入<b>「模态对齐」与「归纳偏置」</b>——用海量互联网视频的泛化性反哺稀缺的物理数据，同时把物理规律作为人类先验注入模型，加速收敛。</p>
+    <div class="quote">硬件上的选择也反着来：<b>用世界模型控制一只 20 个自由度的灵巧手，而不是简单的夹爪</b>。理由是从更高难度入手，才能打通「人类操作数据 → 通用智能泛化」的迁移通道。</div>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">03</span>
+      <h2>数据金字塔<span>／三层，各差一到两个数量级</span></h2>
+    </div>
+    <p class="t" style="max-width:66ch; margin-bottom:clamp(20px,3vh,28px)">这是他们降采集成本的核心设计：不同层级的数据承担不同任务，规模逐层递减。</p>
+    <div class="pyr">
+      <div class="lv">
+        <b>互联网人类视频</b><i>规模最大</i>
+        <span>底层基础，提供泛化性。用海量视频让模型先看懂「人怎么操作世界」。</span>
+      </div>
+      <div class="lv">
+        <b>自研人类数据手套</b><i>比视频低 1–2 个数量级</i>
+        <span>中间层，采集带力觉与姿态的高质量人手数据。已解决精度、穿戴舒适性、抗电磁干扰与遮挡问题，进入量产与规模化采集。</span>
+      </div>
+      <div class="lv">
+        <b>真机数据</b><i>比手套低 1–2 个数量级</i>
+        <span>顶层补充，用于最后的对齐与验证。量最少，但最贵。</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">04</span>
+      <h2>10 个月，6 轮<span>／融资序列</span></h2>
+    </div>
+    <div class="raise">
+      <div class="row"><span class="when">2025.12</span><span class="rd">种子轮</span><span class="who">真格基金独家投资</span></div>
+      <div class="row"><span class="when">2026.03</span><span class="rd">天使轮</span><span class="who">红杉中国进入</span></div>
+      <div class="row"><span class="when">2026.04</span><span class="rd">天使+轮</span><span class="who">红杉中国、真格基金、美团龙珠、顺为资本等联合投资；至此种子轮、天使轮、天使+轮累计近 5 亿元</span></div>
+      <div class="row"><span class="when">2026.06</span><span class="rd">Pre-A · 数亿元</span><span class="who">顺为资本领投，凯辉基金、元禾原点、慕华科创跟投，红杉中国与真格基金继续追加</span></div>
+      <div class="row"><span class="when">2026.07</span><span class="rd">Pre-A+ · 数亿元</span><span class="who">三六零、国开金融、创新工场、CMC 资本、彬复资本等</span></div>
+      <div class="row"><span class="when">2026.09</span><span class="rd">Pre-A++ · 数亿元</span><span class="who">中关村科学城、达晨财智、高信资本、华映资本等；同期发布 Liber-0 Preview</span></div>
+    </div>
+    <p class="t" style="margin-top:20px">节奏值得注意：<b>红杉中国从天使轮起四连投</b>，真格基金从种子轮起累计三轮，顺为从天使+轮首次出手后迅速升任 Pre-A 领投方。同一批机构在极短时间内反复加注同一标的，在这个赛道里不常见。</p>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">05</span>
+      <h2>Liber-0 与那个榜单<span>／2026.09</span></h2>
+    </div>
+    <div class="cols">
+      <div>
+        <p class="t">2026 年 4 月，公司发布高自由度灵巧操作的具身基础模型技术 Demo——可搭载五指灵巧手完成<b>双手剥香蕉、拧瓶盖、持锅颠勺</b>这类精细长程操作。</p>
+        <p class="t">9 月 17 日，随 Pre-A++ 轮一起发布 <b>Liber-0 Preview</b>，在 RoboDojo 官方评测中位列第一。</p>
+      </div>
+      <div>
+        <p class="t">需要说清楚的是：这是 <b>Preview 版本</b>，榜单成绩证明的是模型能力方向，不等于产品交付能力。从排行榜到真实场景的稳定作业，中间还有很长一段路——这一点在公司自己的口径里也没有回避。</p>
+        <p class="t">目前已跑通 UMI 硬件 → 数据采集 → 大模型训练的全流程闭环。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">06</span>
+      <h2>该泼的冷水<span>／「小天才」热的另一面</span></h2>
+    </div>
+    <div class="risk">
+      <h3>资本在追 00 后，但追的不一定是这家公司的未来</h3>
+      <ul>
+        <li><b>估值跑在收入前面。</b>成立不到一年、累计融资超 10 亿元，但商业化收入尚未公开。這类公司的定价里，很大一块是「人」的溢价。</li>
+        <li><b>赛道拥挤。</b>同一时期，一批清华 00 后创业者密集宣布融资——LatentVerse、OriginFlow、零次方机器人、微面科技等，履历画像高度相似。资本在押一个「代际」，不只押一家公司。</li>
+        <li><b>技术路线未收敛。</b>世界模型、VLA、生成式视频三条路线还在打，谁对谁错要看两年后的真机数据，不是现在的榜单。</li>
+        <li><b> founder 还在读博。</b>刘松铭目前仍是清华在读博士，这是加分项也是变量——全职投入的时点、团队职业化程度，都是候选人该问清楚的事。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">07</span>
+      <h2>现在在招</h2>
+    </div>
+    <p class="t" style="max-width:66ch">研发分三条线：算法研究线（世界模型 / robot learning 预训练）、硬件落地线（机器人系统集成、真机部署、硬件调试）、数据线（世界模型训练数据）。其中硬件落地线正在从 0 搭班子。</p>
+    <ul class="roles">
+      <li><b>机器人全栈工程师</b><span>北京 · 算法→硬件→真机全链路</span></li>
+      <li><b>世界模型 / 具身预训练算法</b><span>北京 · 研究线</span></li>
+      <li><b>真机部署与系统集成</b><span>北京 · 硬件落地线</span></li>
+      <li><b>数据采集与治理</b><span>北京 · 数据线</span></li>
+    </ul>
+    <p class="t" style="margin-top:16px; font-size:13px; color:var(--ink-3)">岗位结构来自公开信息与客户访谈整理，具体职级、汇报线与薪酬带宽单独聊。</p>
+
+    <div class="cta">
+      <a class="btn btn--fill" href="mailto:1045321663@qq.com?subject=%E5%BA%94%E8%81%98%20%E5%B0%86%E9%97%B2%E7%A7%91%E6%8A%80%20LiberAI">发邮件聊聊</a>
+      <a class="btn" href="weixin://">微信 Ljhh-HH6666</a>
+    </div>
+  </section>
+
+  <footer>
+    <p><b>将闲科技 LiberAI</b> · 本页由猎头 Lionel 受客户委托整理，非企业官方页面。数据引自公开工商信息、融资公告、雷峰网与中证网等公开报道，整理截至 2026-11-12。融资与模型进展以公司官方披露为准。</p>
+    <p style="text-align:right">猎头 Lionel，受客户委托寻访<br>微信 Ljhh-HH6666 ／ 1045321663@qq.com</p>
+  </footer>
+</div>
+
+</body>
+</html>
