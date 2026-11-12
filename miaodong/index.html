@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>妙动科技｜先把一台机器卖出去，再谈通用</title>
+<meta name="description" content="妙动科技（Mondo Tech）企业介绍：2025 年 1 月成立于深圳南山，大疆系 + 特斯拉 Optimus 团队，首款产品 Beni 轮式摄影机器人 Kickstarter 众筹 460 万美元，799 美元定价。资料截至 2026-11-12。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23091014'/><circle cx='16' cy='16' r='5.5' fill='none' stroke='%2300E0A4' stroke-width='2.2'/><circle cx='16' cy='16' r='1.8' fill='%2300E0A4'/></svg>">
+<style>
+  :root{
+    --bg:#091014; --panel:#0e181d; --line:rgba(255,255,255,.1); --line-2:rgba(255,255,255,.2);
+    --ink:#eef3f4; --ink-2:#9aa9ae; --ink-3:#64747a;
+    --gr:#00e0a4; --gr-2:#5fffc8;
+    --sans:"Microsoft YaHei","PingFang SC","Hiragino Sans GB",-apple-system,system-ui,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg); color:var(--ink); font-family:var(--sans); -webkit-font-smoothing:antialiased;
+    line-height:1.72; overflow-x:hidden}
+  .wrap{width:min(1060px,90vw); margin:0 auto}
+
+  .hero{position:relative; overflow:hidden; border-bottom:1px solid var(--line);
+    background:radial-gradient(120% 90% at 78% 0%, rgba(0,224,164,.16), transparent 62%)}
+  .hero::after{content:""; position:absolute; left:0; right:0; bottom:0; height:1px;
+    background:linear-gradient(90deg, var(--gr), transparent 55%)}
+  .hero__in{width:min(1060px,90vw); margin:0 auto;
+    padding:clamp(60px,11vh,104px) 0 clamp(48px,8vh,80px); position:relative; z-index:2}
+  .eyebrow{display:flex; align-items:center; gap:11px; font-family:var(--mono); font-size:11px;
+    letter-spacing:.2em; color:rgba(255,255,255,.5); text-transform:uppercase}
+  .eyebrow i{width:20px; height:1px; background:var(--gr); display:block}
+  h1{margin-top:22px; font-size:clamp(32px,5.2vw,58px); line-height:1.14; font-weight:800; letter-spacing:-.025em}
+  h1 em{font-style:normal; color:var(--gr-2)}
+  .lede{margin-top:24px; font-size:15px; line-height:1.9; color:rgba(255,255,255,.72); max-width:56ch}
+  .lede b{color:#fff; font-weight:600}
+
+  .stats{list-style:none; display:grid; grid-template-columns:repeat(4,1fr); border-bottom:1px solid var(--line)}
+  .stats li{padding:26px clamp(12px,2vw,24px); border-right:1px solid var(--line)}
+  .stats li:last-child{border-right:0}
+  .stats .v{display:block; font-size:clamp(20px,2.6vw,28px); font-weight:800; letter-spacing:-.03em;
+    font-variant-numeric:tabular-nums; line-height:1.2}
+  .stats .v i{font-style:normal; font-size:.44em; color:var(--ink-3); margin-left:4px; font-weight:600}
+  .stats .k{display:block; margin-top:9px; font-size:12px; color:var(--ink-3); line-height:1.6}
+
+  section{padding:clamp(46px,7.5vh,78px) 0; border-top:1px solid var(--line)}
+  .head{display:flex; gap:18px; align-items:baseline; margin-bottom:clamp(22px,3.6vh,34px); flex-wrap:wrap}
+  .num{font-family:var(--mono); font-size:12px; color:var(--gr); letter-spacing:.12em; padding-top:7px; font-weight:700}
+  h2{font-size:clamp(22px,3vw,32px); font-weight:800; letter-spacing:-.02em; line-height:1.28}
+  h2 span{color:var(--ink-3); font-weight:400}
+  .cols{display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(24px,4vw,52px)}
+  p.t{font-size:14.5px; color:var(--ink-2); line-height:1.92}
+  p.t + p.t{margin-top:15px}
+  p.t b{color:var(--ink); font-weight:700}
+
+  .tbl{width:100%; border-collapse:collapse; margin-top:6px; border-top:1px solid var(--line)}
+  .tbl td{padding:14px 0; border-bottom:1px solid var(--line); font-size:13.5px; color:var(--ink-2);
+    vertical-align:top; line-height:1.75}
+  .tbl td:first-child{width:26%; color:var(--ink); font-weight:700; font-size:13px; padding-right:18px}
+  .tbl td b{color:var(--ink)}
+
+  .people{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:6px}
+  .who{background:var(--panel); border:1px solid var(--line); padding:clamp(20px,2.6vw,28px); position:relative}
+  .who::before{content:""; position:absolute; left:0; top:0; width:3px; height:32px; background:var(--gr)}
+  .who h3{font-size:18px; font-weight:800}
+  .who .role{font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; color:var(--gr); margin-top:6px; text-transform:uppercase}
+  .who ul{list-style:none; margin-top:14px; font-size:13px; color:var(--ink-2)}
+  .who ul li{position:relative; padding-left:14px; margin-top:9px; line-height:1.7}
+  .who ul li::before{content:""; position:absolute; left:0; top:.68em; width:5px; height:1px; background:var(--gr)}
+
+  .spec{margin-top:6px; border-top:1px solid var(--line)}
+  .spec .row{display:grid; grid-template-columns:.9fr 1fr 1.5fr; gap:16px; padding:14px 0;
+    border-bottom:1px solid var(--line); align-items:baseline}
+  .spec .nm{font-size:13.5px; font-weight:650}
+  .spec .mt{font-family:var(--mono); font-size:12.5px; color:var(--gr); font-variant-numeric:tabular-nums}
+  .spec .ds{font-size:13px; color:var(--ink-2); line-height:1.72}
+
+  .risk{background:rgba(255,255,255,.03); border:1px solid var(--line); border-left:3px solid #ffb74d;
+    padding:clamp(20px,2.6vw,28px); margin-top:6px}
+  .risk h3{font-size:16px; font-weight:750; color:#ffcc80}
+  .risk ul{list-style:none; margin-top:14px; font-size:13.5px; color:var(--ink-2)}
+  .risk ul li{position:relative; padding-left:16px; margin-top:11px; line-height:1.78}
+  .risk ul li::before{content:""; position:absolute; left:0; top:.7em; width:5px; height:1px; background:#ffb74d}
+  .risk b{color:var(--ink)}
+
+  .quote{margin-top:22px; padding:20px 24px; background:var(--panel); border:1px solid var(--line);
+    font-size:14px; color:var(--ink-2); line-height:1.9}
+  .quote b{color:var(--ink)}
+
+  .cta{display:flex; gap:13px; flex-wrap:wrap; margin-top:clamp(26px,4vh,36px)}
+  .btn{display:inline-flex; align-items:center; padding:13px 24px; font-size:13.5px; text-decoration:none;
+    border:1px solid var(--line-2); color:var(--ink); transition:.2s; letter-spacing:.02em}
+  .btn:hover{border-color:var(--ink-3); background:rgba(255,255,255,.05)}
+  .btn--fill{background:var(--gr); border-color:var(--gr); color:#04120d; font-weight:700}
+  .btn--fill:hover{background:var(--gr-2); border-color:var(--gr-2)}
+
+  footer{border-top:1px solid var(--line); padding:clamp(30px,5vh,46px) 0 clamp(28px,4vh,40px);
+    display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap;
+    font-size:11.5px; color:var(--ink-3); line-height:1.85}
+  footer b{color:var(--ink-2); font-weight:600}
+  footer p{max-width:64ch}
+
+  @media (max-width:900px){
+    .stats{grid-template-columns:1fr 1fr}
+    .cols,.people{grid-template-columns:1fr}
+    .spec .row,.tbl td{display:block; padding:10px 0}
+    .spec .row{gap:5px}
+    .tbl td:first-child{width:auto; padding-bottom:2px}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero__in">
+    <p class="eyebrow"><i></i>妙动科技<span>／深圳南山 · 硅谷 · 2025.01</span></p>
+    <h1>先把一台机器卖出去，<br>再<em>谈通用</em>。</h1>
+    <p class="lede">大疆系 + 特斯拉 Optimus 的组合，最后没做全尺寸人形，做了一台 <b>799 美元的轮式摄影机器人</b> Beni。Kickstarter 上 460 万美元、7300 多人买单——在具身智能一堆 PPT 里，这是少见的「已经有人掏钱」。</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <ul class="stats">
+    <li><span class="v">460<i>万美元</i></span><span class="k">Beni 在 Kickstarter 众筹总额</span></li>
+    <li><span class="v">799<i>美元</i></span><span class="k">Single 定价，主攻海外</span></li>
+    <li><span class="v">28.8<i>km/h</i></span><span class="k">最高跟随速度，能追滑板</span></li>
+    <li><span class="v">12<i>亿美元</i></span><span class="k">新一轮融资目标估值（推进中）</span></li>
+  </ul>
+
+  <section>
+    <div class="head">
+      <span class="num">01</span>
+      <h2>一支「硬件老兵」的班子<span>／大疆 ＋ 特斯拉</span></h2>
+    </div>
+    <p class="t" style="max-width:68ch; margin-bottom:clamp(20px,3vh,28px)">这家公司 2025 年 1 月成立，总部深圳南山，在硅谷设研发办公室。团队配置在具身圈算罕见：一个管过全球最难的硬件供应链，一个在特斯拉做过人形机器人。</p>
+    <div class="people">
+      <div class="who">
+        <h3>高建荣</h3>
+        <div class="role">创始人 &amp; CEO</div>
+        <ul>
+          <li>在大疆工作 9 年，先后任汪滔总经理助理、RoboMaster 赛事总监、供应链负责人</li>
+          <li>熟悉的不只是产品定义，是从研发到量产到渠道的整条链路</li>
+        </ul>
+      </div>
+      <div class="who">
+        <h3>杨硕</h3>
+        <div class="role">联合创始人 &amp; CTO</div>
+        <ul>
+          <li>师从李泽湘教授，曾在大疆负责飞行控制算法</li>
+          <li>卡内基梅隆大学机器人学博士，毕业后加入特斯拉 Optimus 团队，是团队中职位最高的华人工程师之一</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">02</span>
+      <h2>为什么没做人形<span>／换过几轮方向</span></h2>
+    </div>
+    <div class="cols">
+      <div>
+        <p class="t">这条路绕得很远。最早考虑的是复活大疆体系里的 TELO 和 Robot Master S One，方向偏教育场景的无人机；具身概念升温后转向具身；真正第一个念头其实是<b>人形</b>——高建荣想做一台能牵着小孩的手在小区里遛弯的小机器人。</p>
+        <p class="t">但人形赛道巨头已经跑在前面。团队退一步，把切口定在「机器人 + 影像」。</p>
+        <p class="t">投资人的评价是：想得比较清楚——现在做一个全尺寸人形很难落地，不如先从这个消费场景做起。</p>
+      </div>
+      <div>
+        <p class="t">为什么是影像？行业里的分析是：大疆、Insta360 的主要收入靠影像，纯陪伴机器人消费者付不起价，只有影像能撑住估值。而在现有坐标系里——运动相机占第一视角与极限运动、无人机占航拍与旅行、Pocket 占手持 Vlog——<b>「地面移动视角 + 户外运动」这块没人认领</b>。</p>
+        <p class="t">Beni 要的就是这个位置。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">03</span>
+      <h2>Beni 是什么<span>／一台会跟着你跑的地面摄像机</span></h2>
+    </div>
+    <div class="spec">
+      <div class="row"><span class="nm">形态</span><span class="mt">轮式 / 轮足混合</span><span class="ds">能跳过 10 英寸高的障碍，全地形移动</span></div>
+      <div class="row"><span class="nm">影像</span><span class="mt">4K</span><span class="ds">智能自动跟随，自动剪辑精彩片段</span></div>
+      <div class="row"><span class="nm">速度</span><span class="mt">28.8 km/h</span><span class="ds">跟得上滑板和自行车</span></div>
+      <div class="row"><span class="nm">场景</span><span class="mt">滑板 / 网球 / 宠物</span><span class="ds">官方展示覆盖滑板跟拍、网球记录、家庭日常、宠物追踪</span></div>
+      <div class="row"><span class="nm">众筹</span><span class="mt">460 万美元</span><span class="ds">上线 10 小时破 125 万美元，创近年家庭机器人方向纪录；最终 7300+ 支持者</span></div>
+    </div>
+    <div class="quote">Kickstarter 页面上，<b>「Robot」出现的频率远高于「Camera」</b>。这个措辞是有意的：如果定位成跟拍相机，799 美元会觉得贵；但定位成机器人，在动辄上万的价格参照下，799 美元就变成「至少它有个功能」。</div>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">04</span>
+      <h2>争议也要说清楚<span>／这页不吹</span></h2>
+    </div>
+    <div class="risk">
+      <h3>外界对 Beni 的四个质疑，都成立</h3>
+      <ul>
+        <li><b>视角问题。</b>Beni 从膝盖往上仰拍，对多数日常场景不友好——有投资人直言这个角度「太死亡」。它的核心场景可能最终会收敛到宠物拍摄；但在滑板、极限运动这个特定场景里，低机位仰拍恰恰是最吃香的角度。</li>
+        <li><b>结构妥协。</b>轮足混合为地形适应性做了让步，刚性结构意味着缓冲弱、对抗强，平衡更难做。目前<b>爬不了楼梯</b>。</li>
+        <li><b>影像门槛。</b>CMOS 选型、ISP、白平衡、各场景画质调优——每一项都需要长期积累，这是大疆的护城河，也是妙动要补的课。</li>
+        <li><b>供应链窗口。</b>Beni 部分硬件方案和量产依赖外部供应链，核心零部件与电机自研。但随着机器人供应链成熟，做出一款形态相近的产品不再特别难，<b>先发优势的窗口可能没有想象中长</b>。</li>
+      </ul>
+    </div>
+    <p class="t" style="margin-top:22px">这些问题投资人都知道，钱还是进来了。一位分析师的评价是「在 PMF 角度，Beni 比同赛道友商或许稍好一点」——因为它没讲「家庭陪伴」这种模糊故事，指向很具体：<b>你滑板、打球、遛狗，没人给你拍，那就用这台机器帮你拍</b>。这个场景不需要消费者去想象。</p>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">05</span>
+      <h2>资本在为谁投票<span>／宇树三大股东也押了</span></h2>
+    </div>
+    <div class="cols">
+      <div>
+        <p class="t">红杉中国、美团龙珠是早期投资方，经纬创投也在其中。一个耐人寻味的时点：<b>2026 年 8 月 19 日宇树科技登陆科创板</b>，成为 A 股「人形机器人第一股」；8 月 24 日，宇树的三大外部股东——美团、红杉中国、经纬创投——被曝联手投资妙动。</p>
+        <p class="t">三家顶级机构同时下注同一标的，这在具身赛道不常见。</p>
+      </div>
+      <div>
+        <p class="t">融资节奏也在加快：先以约 <b>7 亿美元</b>估值推进一轮，额度很快被消化，随后新投资方继续进场，估值上探至 <b>12 亿美元</b>。</p>
+        <p class="t">要注意的是，这个估值逻辑更接近消费电子，而不是人形机器人——它靠的是一台已经开卖、有人付钱的产品，不是一张路线图。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">06</span>
+      <h2>这个团队的气质</h2>
+    </div>
+    <p class="t" style="max-width:68ch">从公开信息能看出几件事：<b>方向可以换，但产品必须先成立</b>——他们换过教育无人机、具身、人形，最后落在影像，每一次调整都朝着「能卖」靠；<b>硬件是长项，影像和 AI 是要补的</b>——团队构成决定打法；<b>先打巨头盯不上的位置</b>，用一个小场景养活自己，再谈更大的故事。</p>
+    <p class="t">这条路的风险和机会是同一件事：如果 Beni 能在海外站稳，它就有了一个别人很难复制的入口；如果站不稳，估值会立刻被按回消费电子的逻辑。</p>
+
+    <div class="cta">
+      <a class="btn btn--fill" href="mailto:1045321663@qq.com?subject=%E5%BA%94%E8%81%98%20%E5%A6%99%E5%8A%A8%E7%A7%91%E6%8A%80">发邮件聊聊</a>
+      <a class="btn" href="weixin://">微信 Ljhh-HH6666</a>
+    </div>
+  </section>
+
+  <footer>
+    <p><b>妙动科技</b> · 本页由猎头 Lionel 受客户委托整理，非企业官方页面。数据引自雷峰网·鲸犀、投资界、今讯网等公开报道，整理截至 2026-11-12。团队任职与融资节点以官方披露为准。</p>
+    <p style="text-align:right">猎头 Lionel，受客户委托寻访<br>微信 Ljhh-HH6666 ／ 1045321663@qq.com</p>
+  </footer>
+</div>
+
+</body>
+</html>
