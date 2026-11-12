@@ -103,7 +103,21 @@
   footer b{color:var(--ink-2); font-weight:600}
   footer p{max-width:64ch}
 
+  /* 配图 */
+  .shot{margin:0 0 clamp(20px,3vh,28px); border:1px solid var(--line); background:#0d0a06;
+    display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:clamp(16px,3vw,32px);
+    padding:clamp(10px,2vw,18px)}
+  .shot img{width:100%; display:block}
+  .shot figcaption{
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.05em; color:var(--ink-3);
+    display:block; padding:0 clamp(4px,1.5vw,12px);
+  }
+  .shot figcaption b{display:block; font-family:var(--sans); font-size:15px; font-weight:750;
+    color:var(--ink); letter-spacing:0; margin-bottom:10px}
+  .shot figcaption span{display:block; margin-top:8px; line-height:1.7; letter-spacing:0; font-size:12px}
+
   @media (max-width:900px){
+    .shot{grid-template-columns:1fr}
     .stats{grid-template-columns:1fr 1fr}
     .cols,.prods,.vs{grid-template-columns:1fr}
     .raise .row{grid-template-columns:1fr; gap:5px}
@@ -191,6 +205,14 @@
       <h2>直驱还是肌腱<span>／一个技术路线判断</span></h2>
     </div>
     <p class="t" style="max-width:68ch; margin-bottom:clamp(20px,3vh,28px)">灵巧手行业主流走<b>肌腱驱动</b>——电机放在前臂，用腱绳远程拉动手指，好处是手可以做得轻。舞肌选了另一条：<b>关节内置直驱</b>，电机直接放在指关节里。这是这家公司最值得看懂的技术判断。</p>
+    <figure class="shot">
+      <img src="assets/hand-drawing.jpg" width="920" height="954" alt="Wuji Hand 结构线稿：五个手指的关节串联直驱结构，每指四个关节，掌心为一体化基板">
+      <figcaption>
+        <b>Wuji Hand 结构：20 个关节串联直驱</b>
+        <span>每指 4 个关节，共 20 个主动自由度；旋转关节串联直驱，没有非线性运动学关系——这是力控能做到毫厘级的物理前提。</span>
+        <span style="color:var(--ink-3)">图源：舞肌科技官网（已做深浅反转处理）</span>
+      </figcaption>
+    </figure>
     <div class="vs">
       <div>
         <h4>肌腱驱动 <small>行业主流</small></h4>
