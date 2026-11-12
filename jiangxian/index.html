@@ -178,6 +178,10 @@
     <p class="t" style="max-width:68ch">LiberAI 的判断是：当前具身模型泛化性不足的根源，<b>在于缺乏对力和因果关系的建模</b>。模型不理解「力是因、运动状态是果」，就没法像人一样完成精细的长程物理操作。</p>
     <p class="t" style="max-width:68ch">在这个判断之下，他们与主流路线做了两个区分：不靠纯视频生成，也不靠物理引擎，而是引入<b>「模态对齐」与「归纳偏置」</b>——用海量互联网视频的泛化性反哺稀缺的物理数据，同时把物理规律作为人类先验注入模型，加速收敛。</p>
     <div class="quote">硬件上的选择也反着来：<b>用世界模型控制一只 20 个自由度的灵巧手，而不是简单的夹爪</b>。理由是从更高难度入手，才能打通「人类操作数据 → 通用智能泛化」的迁移通道。</div>
+    <figure class="shot" style="margin-top:clamp(20px,3vh,30px)">
+      <img src="assets/figure-transfer.jpg" width="1400" height="660" alt="Liber-0 技术示意图：左侧 Human experience 椭圆群、中间 Glove data 作为 action grounding 桥梁、右侧 General robot manipulation，下方标注 LEO 人形对齐平台">
+      <figcaption><span>人类经验 → 手套数据 → 通用机器人操作：三处 gap 与 LEO 的位置</span><span>图源：LiberAI 官方技术博客</span></figcaption>
+    </figure>
   </section>
 
   <section>
