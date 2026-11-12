@@ -99,6 +99,14 @@
   footer b{color:var(--ink-2); font-weight:600}
   footer p{max-width:64ch}
 
+  /* 配图 */
+  .shot{margin:0; border-bottom:1px solid var(--line); background:#0b1418; overflow:hidden}
+  .shot img{width:100%; display:block}
+  .shot figcaption{
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.05em; color:var(--ink-3);
+    padding:11px 0; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
+  }
+
   @media (max-width:900px){
     .stats{grid-template-columns:1fr 1fr}
     .cols,.people{grid-template-columns:1fr}
@@ -126,12 +134,17 @@
     <li><span class="v">12<i>亿美元</i></span><span class="k">新一轮融资目标估值（推进中）</span></li>
   </ul>
 
+  <figure class="shot">
+    <img src="assets/hero-beni.jpg" width="1600" height="840" alt="Beni 跟拍机器人站在体育场跑道上，白色机身配大红眼睛，画面左侧写着 Beni Your Multi-terrain Camera Robot">
+    <figcaption><span>Beni · 多地形跟拍机器人</span><span>图源：Mondo Robotics 官网</span></figcaption>
+  </figure>
+
   <section>
     <div class="head">
       <span class="num">01</span>
       <h2>一支「硬件老兵」的班子<span>／大疆 ＋ 特斯拉</span></h2>
     </div>
-    <p class="t" style="max-width:68ch; margin-bottom:clamp(20px,3vh,28px)">这家公司 2025 年 1 月成立，总部深圳南山，在硅谷设研发办公室。团队配置在具身圈算罕见：一个管过全球最难的硬件供应链，一个在特斯拉做过人形机器人。</p>
+    <p class="t" style="max-width:68ch; margin-bottom:clamp(20px,3vh,28px)">这家公司 2025 年 1 月成立，总部深圳南山，在美国加州 Palo Alto 设研发办公室，团队 200 多人（工程师与设计师）。团队配置在具身圈算罕见：一个管过全球最难的硬件供应链，一个在特斯拉做过人形机器人。</p>
     <div class="people">
       <div class="who">
         <h3>高建荣</h3>
@@ -176,11 +189,13 @@
       <h2>Beni 是什么<span>／一台会跟着你跑的地面摄像机</span></h2>
     </div>
     <div class="spec">
-      <div class="row"><span class="nm">形态</span><span class="mt">轮式 / 轮足混合</span><span class="ds">能跳过 10 英寸高的障碍，全地形移动</span></div>
-      <div class="row"><span class="nm">影像</span><span class="mt">4K</span><span class="ds">智能自动跟随，自动剪辑精彩片段</span></div>
+      <div class="row"><span class="nm">形态</span><span class="mt">双轮足</span><span class="ds">最高跳跃 <b>25.4 cm</b>，能过石阶与路缘；摔倒后自主起身继续拍</span></div>
+      <div class="row"><span class="nm">影像</span><span class="mt">4K / 60fps</span><span class="ds">HDR 色彩，智能自动跟随，APP 智能剪辑；支持后方、平行、360° 环绕运镜</span></div>
       <div class="row"><span class="nm">速度</span><span class="mt">28.8 km/h</span><span class="ds">跟得上滑板和自行车</span></div>
-      <div class="row"><span class="nm">场景</span><span class="mt">滑板 / 网球 / 宠物</span><span class="ds">官方展示覆盖滑板跟拍、网球记录、家庭日常、宠物追踪</span></div>
-      <div class="row"><span class="nm">众筹</span><span class="mt">460 万美元</span><span class="ds">上线 10 小时破 125 万美元，创近年家庭机器人方向纪录；最终 7300+ 支持者</span></div>
+      <div class="row"><span class="nm">机身</span><span class="mt">1.75 kg</span><span class="ds">21.5 × 18 × 18 cm，折叠后可放进背包；单块电池约 1.5 小时，可换电池</span></div>
+      <div class="row"><span class="nm">场景</span><span class="mt">滑板 / 网球 / 宠物</span><span class="ds">官方展示覆盖滑板跟拍、网球记录、家庭日常、宠物追踪；2026.11.10 全球现货开售</span></div>
+      <div class="row"><span class="nm">价格</span><span class="mt">799 美元 / 4,999 元</span><span class="ds">海外 799 美元；国内标准套装 4,999 元、探索套装 5,799 元（京东开售）</span></div>
+      <div class="row"><span class="nm">众筹</span><span class="mt">460 万美元</span><span class="ds">上线 10 小时破 125 万美元；最终 7300+ 支持者</span></div>
     </div>
     <div class="quote">Kickstarter 页面上，<b>「Robot」出现的频率远高于「Camera」</b>。这个措辞是有意的：如果定位成跟拍相机，799 美元会觉得贵；但定位成机器人，在动辄上万的价格参照下，799 美元就变成「至少它有个功能」。</div>
   </section>
