@@ -107,6 +107,15 @@
   footer b{color:var(--ink-2); font-weight:600}
   footer p{max-width:64ch}
 
+  /* 配图 */
+  .shot{margin:0 0 clamp(20px,3vh,28px); border:1px solid var(--line); background:#100d22; overflow:hidden}
+  .shot img{width:100%; display:block}
+  .shot figcaption{
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.05em; color:var(--ink-3);
+    padding:11px 14px; border-top:1px solid var(--line); display:flex; justify-content:space-between;
+    gap:12px; flex-wrap:wrap;
+  }
+
   @media (max-width:900px){
     .stats{grid-template-columns:1fr 1fr}
     .cols{grid-template-columns:1fr}
@@ -214,13 +223,17 @@
       <span class="num">05</span>
       <h2>Liber-0 与那个榜单<span>／2026.09</span></h2>
     </div>
+    <figure class="shot">
+      <img src="assets/liber0-demo.jpg" width="1080" height="608" alt="Liber-0 真机作业画面：一双白色五指灵巧手在餐桌布上操作，桌上有木盒、水果碗、黑色耳机与笔">
+      <figcaption><span>Liber-0 零样本操作：真机作业画面</span><span>图源：LiberAI 官网技术博客</span></figcaption>
+    </figure>
     <div class="cols">
       <div>
-        <p class="t">2026 年 4 月，公司发布高自由度灵巧操作的具身基础模型技术 Demo——可搭载五指灵巧手完成<b>双手剥香蕉、拧瓶盖、持锅颠勺</b>这类精细长程操作。</p>
-        <p class="t">9 月 17 日，随 Pre-A++ 轮一起发布 <b>Liber-0 Preview</b>，在 RoboDojo 官方评测中位列第一。</p>
+        <p class="t">2026 年 4 月，公司发布高自由度灵巧操作的具身基础模型技术 Demo——五指灵巧手完成<b>双手剥香蕉、拧瓶盖、持锅颠勺</b>这类精细长程操作。</p>
+        <p class="t">9 月 17 日发布 <b>Liber-0 Preview</b>。官方把它定义为 World Action Model（WAM），预训练数据是 <b>220 万小时人类经验</b>。在 GPT-6 提出的 60 个随机任务、600 次试验中，总体成功率 <b>36.0%</b>；挑战性的多步 Non-PnP 任务 <b>10.5%</b>。此前在 RoboDojo 官方评测中位列第一。</p>
       </div>
       <div>
-        <p class="t">需要说清楚的是：这是 <b>Preview 版本</b>，榜单成绩证明的是模型能力方向，不等于产品交付能力。从排行榜到真实场景的稳定作业，中间还有很长一段路——这一点在公司自己的口径里也没有回避。</p>
+        <p class="t">需要说清楚的是：这是 <b>Preview 版本</b>。36.0% 的总体成功率，意味着三个任务里成一个；多步任务 <b>10.5%</b>——离可靠、可规模部署的通用灵巧操作还有明显距离。这一点公司自己在技术博客里也写明了。</p>
         <p class="t">目前已跑通 UMI 硬件 → 数据采集 → 大模型训练的全流程闭环。</p>
       </div>
     </div>
