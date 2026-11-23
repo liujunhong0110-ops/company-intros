@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>歌尔光学 Goeroptics｜光怎么走进眼睛，这家公司管了十四年</title>
+<meta name="description" content="歌尔光学（Goeroptics）企业介绍：2012 年成立，歌尔集团旗下 XR 光学与精密光学业务板块。AR 全彩光波导五款产品、VR/MR Pancake 模组、车载 HUD 与智能大灯、微投影光机与工业视觉。舜宇以约 19.03 亿元换股成为第二大股东。资料截至 2026-11-23。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2306080a'/><circle cx='16' cy='16' r='8' fill='none' stroke='%2300e676' stroke-width='2'/><path d='M6 16h20' stroke='%2300e676' stroke-width='1.6' opacity='.55'/></svg>">
+<style>
+  :root{
+    --bg:#06080a; --panel:#0c1014; --line:rgba(255,255,255,.09); --line-2:rgba(255,255,255,.18);
+    --ink:#eef2f1; --ink-2:#98a5a2; --ink-3:#5f6b69;
+    --gr:#00e676; --gr-2:#7dffb8;
+    --sans:"Microsoft YaHei","PingFang SC","Hiragino Sans GB",-apple-system,system-ui,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg); color:var(--ink); font-family:var(--sans); -webkit-font-smoothing:antialiased;
+    line-height:1.72; overflow-x:hidden}
+  .wrap{width:min(1060px,90vw); margin:0 auto}
+
+  /* hero */
+  .hero{position:relative; overflow:hidden; border-bottom:1px solid var(--line); min-height:clamp(460px,74vh,720px)}
+  .hero__bg{position:absolute; inset:0; z-index:0}
+  .hero__bg img{width:100%; height:100%; object-fit:cover; object-position:center 45%; opacity:.62}
+  .hero__bg::after{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(102deg,#06080a 4%, rgba(6,8,10,.94) 40%, rgba(6,8,10,.5) 68%, rgba(6,8,10,.8) 100%);
+  }
+  .hero__in{position:relative; z-index:2; width:min(1060px,90vw); margin:0 auto;
+    padding:clamp(64px,12vh,112px) 0 clamp(52px,9vh,88px)}
+  .eyebrow{display:flex; align-items:center; gap:11px; font-family:var(--mono); font-size:11px;
+    letter-spacing:.2em; color:rgba(255,255,255,.5); text-transform:uppercase}
+  .eyebrow i{width:20px; height:1px; background:var(--gr); display:block}
+  h1{margin-top:22px; font-size:clamp(32px,5.2vw,56px); line-height:1.15; font-weight:800; letter-spacing:-.025em; max-width:20em}
+  h1 em{font-style:normal; color:var(--gr-2)}
+  .lede{margin-top:24px; font-size:15px; line-height:1.9; color:rgba(255,255,255,.72); max-width:56ch}
+  .lede b{color:#fff; font-weight:600}
+
+  .stats{list-style:none; display:grid; grid-template-columns:repeat(4,1fr); border-bottom:1px solid var(--line)}
+  .stats li{padding:26px clamp(12px,2vw,24px); border-right:1px solid var(--line)}
+  .stats li:last-child{border-right:0}
+  .stats .v{display:block; font-size:clamp(20px,2.6vw,28px); font-weight:800; letter-spacing:-.03em;
+    font-variant-numeric:tabular-nums; line-height:1.2}
+  .stats .v i{font-style:normal; font-size:.44em; color:var(--ink-3); margin-left:4px; font-weight:600}
+  .stats .k{display:block; margin-top:9px; font-size:12px; color:var(--ink-3); line-height:1.6}
+
+  section{padding:clamp(46px,7.5vh,78px) 0; border-top:1px solid var(--line)}
+  .head{display:flex; gap:18px; align-items:baseline; margin-bottom:clamp(22px,3.6vh,34px); flex-wrap:wrap}
+  .num{font-family:var(--mono); font-size:12px; color:var(--gr); letter-spacing:.12em; padding-top:7px; font-weight:700}
+  h2{font-size:clamp(22px,3vw,32px); font-weight:800; letter-spacing:-.02em; line-height:1.28}
+  h2 span{color:var(--ink-3); font-weight:400}
+  .cols{display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(24px,4vw,52px)}
+  p.t{font-size:14.5px; color:var(--ink-2); line-height:1.92}
+  p.t + p.t{margin-top:15px}
+  p.t b{color:var(--ink); font-weight:700}
+
+  .tbl{width:100%; border-collapse:collapse; margin-top:6px; border-top:1px solid var(--line)}
+  .tbl td{padding:14px 0; border-bottom:1px solid var(--line); font-size:13.5px; color:var(--ink-2);
+    vertical-align:top; line-height:1.75}
+  .tbl td:first-child{width:22%; color:var(--ink); font-weight:700; font-size:13px; padding-right:18px}
+  .tbl td b{color:var(--ink)}
+
+  /* 波导产品表 */
+  .wg{margin-top:6px; border-top:2px solid var(--gr)}
+  .wg .row{display:grid; grid-template-columns:150px 1fr 1.35fr; gap:18px; padding:16px 0;
+    border-bottom:1px solid var(--line); align-items:baseline}
+  .wg .nm{font-family:var(--mono); font-size:13px; color:var(--ink); font-weight:700; letter-spacing:.02em}
+  .wg .nm i{display:block; font-style:normal; font-family:var(--sans); font-size:11px; color:var(--gr);
+    font-weight:600; letter-spacing:0; margin-top:5px}
+  .wg .mt{font-family:var(--mono); font-size:12.5px; color:var(--gr-2); font-variant-numeric:tabular-nums; line-height:1.6}
+  .wg .ds{font-size:13px; color:var(--ink-2); line-height:1.72}
+
+  .prods{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:6px}
+  .prod{background:var(--panel); border:1px solid var(--line); padding:clamp(20px,2.6vw,28px); position:relative}
+  .prod::before{content:""; position:absolute; left:0; top:0; width:100%; height:2px; background:var(--gr)}
+  .prod h3{font-size:17px; font-weight:800}
+  .prod .sub{font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; color:var(--gr); margin-top:6px; text-transform:uppercase}
+  .prod ul{list-style:none; margin-top:13px; font-size:13px; color:var(--ink-2)}
+  .prod ul li{position:relative; padding-left:14px; margin-top:9px; line-height:1.72}
+  .prod ul li::before{content:""; position:absolute; left:0; top:.68em; width:5px; height:1px; background:var(--gr)}
+
+  figure.shot{margin:0; border:1px solid var(--line); overflow:hidden; background:#080c0f}
+  figure.shot img{width:100%; display:block}
+  figure.shot figcaption{font-family:var(--mono); font-size:10.5px; color:var(--ink-3); padding:11px 14px;
+    border-top:1px solid var(--line); display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap}
+  .shot--top{margin-bottom:clamp(24px,4vh,36px)}
+
+  .quote{margin-top:22px; padding:22px 26px; background:var(--panel); border:1px solid var(--line);
+    border-left:3px solid var(--gr); font-size:14px; color:var(--ink-2); line-height:1.92}
+  .quote b{color:var(--ink)}
+
+  .roles{list-style:none; margin-top:6px; border-top:1px solid var(--line);
+    display:grid; grid-template-columns:1fr 1fr; gap:0 clamp(20px,3vw,40px)}
+  .roles li{padding:13px 0; border-bottom:1px solid var(--line); display:flex; justify-content:space-between;
+    gap:12px; align-items:baseline}
+  .roles b{font-size:13.5px; font-weight:650}
+  .roles span{font-family:var(--mono); font-size:10.5px; color:var(--ink-3); white-space:nowrap}
+
+  .cta{display:flex; gap:13px; flex-wrap:wrap; margin-top:clamp(26px,4vh,36px)}
+  .btn{display:inline-flex; align-items:center; padding:13px 24px; font-size:13.5px; text-decoration:none;
+    border:1px solid var(--line-2); color:var(--ink); transition:.2s; letter-spacing:.02em}
+  .btn:hover{border-color:var(--ink-3); background:rgba(255,255,255,.05)}
+  .btn--fill{background:var(--gr); border-color:var(--gr); color:#04120a; font-weight:700}
+  .btn--fill:hover{background:var(--gr-2); border-color:var(--gr-2)}
+
+  footer{border-top:1px solid var(--line); padding:clamp(30px,5vh,46px) 0 clamp(28px,4vh,40px);
+    display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap;
+    font-size:11.5px; color:var(--ink-3); line-height:1.85}
+  footer b{color:var(--ink-2); font-weight:600}
+  footer p{max-width:64ch}
+
+  @media (max-width:900px){
+    .stats{grid-template-columns:1fr 1fr}
+    .cols,.prods,.roles{grid-template-columns:1fr}
+    .wg .row{grid-template-columns:1fr; gap:6px}
+    .tbl td{display:block; padding:10px 0}
+    .tbl td:first-child{width:auto; padding-bottom:2px}
+    .hero__bg img{object-position:center}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero__bg">
+    <img src="assets/lens-visual.jpg" width="1200" height="1200" alt="深蓝色调下的光学镜片与光环视觉，细密光点环绕镜片边缘">
+  </div>
+  <div class="hero__in">
+    <p class="eyebrow"><i></i>Goeroptics<span>／歌尔光学 · 潍坊 · 2012</span></p>
+    <h1>光怎么走进眼睛，<br>这家公司<em>管了十四年</em>。</h1>
+    <p class="lede">歌尔集团里有两条线容易混：一条做「发光的那层」，一条做「光怎么走」。歌尔光学是后者——AR 全彩光波导、VR 折叠光路、车载 HUD、投影光机、微纳光学与工业镜头。<b>从设计一直做到量产交付</b>。</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <ul class="stats">
+    <li><span class="v">2012<i>年</i></span><span class="k">成立，潍坊高新区</span></li>
+    <li><span class="v">19.03<i>亿元</i></span><span class="k">舜宇换股，成为第二大股东</span></li>
+    <li><span class="v">12<i>英寸</i></span><span class="k">国内首条 DUV+刻蚀波导量产线</span></li>
+    <li><span class="v">1000<i>+</i></span><span class="k">专利，七成为发明专利（2024）</span></li>
+  </ul>
+
+  <section>
+    <div class="head">
+      <span class="num">01</span>
+      <h2>它在歌尔体系里的位置<span>／跟视显是两件事</span></h2>
+    </div>
+    <div class="cols">
+      <div>
+        <p class="t">歌尔光学 2012 年成立，总部在山东潍坊高新区，研发布局潍坊、青岛、上海、深圳，以及美国、日本。2026 年 6 月又在上海闵行「大零号湾」设了研发总部。主营五块：<b>XR 光学镜片与成像模组、智能投影光机、微纳光学元件及激光模组、工业镜头、车载光学</b>。</p>
+        <p class="t">它和歌尔视显的分工，一句话说得清：<b>视显管「发光的那层」——硅基 OLED / Micro LED 器件；光学管「光怎么走」——波导、折叠光路、光机、镜头</b>。一个在像素上做文章，一个在光路上做文章。</p>
+        <p class="t">这条线真正的壁垒不在设计，在产线。AR 波导的良率、一致性、量产成本，全押在光刻刻蚀那一层工艺上。歌尔光学在上海临港建成了 <b>12 英寸 DUV 光刻刻蚀产线</b>——国内首条，非接触加工减少镜片表面损伤，这也是它敢接消费级 AR 大单的底气。</p>
+      </div>
+      <div>
+        <table class="tbl">
+          <tbody>
+            <tr><td>公司主体</td><td>歌尔光学科技有限公司</td></tr>
+            <tr><td>成立时间</td><td>2012 年</td></tr>
+            <tr><td>总部</td><td>山东潍坊高新技术开发区</td></tr>
+            <tr><td>研发布局</td><td>潍坊 · 青岛 · 上海 · 深圳 · 美国 · 日本</td></tr>
+            <tr><td>上海研发总部</td><td>2026 年 6 月设于闵行「大零号湾」</td></tr>
+            <tr><td>关键产线</td><td>12 英寸 AR 衍射光波导产线（上海临港）</td></tr>
+            <tr><td>专利</td><td>截至 2024 年千余项，<b>70% 为发明专利</b></td></tr>
+            <tr><td>行业角色</td><td>主导建设虚拟现实领域光学精密检测中心</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">02</span>
+      <h2>两次整合<span>／光学这一环正在被收拢</span></h2>
+    </div>
+    <p class="t" style="max-width:68ch">2025 年底到 2026 年，这家公司做了两个动作，比发新品更能说明行业走到了哪一步。</p>
+    <div class="quote">
+      <b>一是把舜宇奥来收了进来。</b>2025 年 12 月，舜宇奥来微纳光电信息技术（上海）完成工商变更：原股东宁波舜宇奥来技术退出，歌尔光学成为全资股东，法定代表人由叶辽宁变更为<b>饶轶</b>。交易的另一半是——舜宇光学通过换股、以约 <b>19.03 亿元</b>成为歌尔光学的第二大股东。歌尔光学则通过增发注册资本，取得舜宇奥来微纳光学（上海）与舜宇奥来微纳光电信息技术（上海）两家公司 100% 股权。
+    </div>
+    <div class="quote">
+      <b>二是和康耐特成立合资公司。</b>2026 年 9 月，康耐特光学与歌尔光学设立合资公司，补的是智能眼镜产业链的上下游协同——康耐特做镜片，歌尔光学做光机与波导，合起来才是完整的一副眼镜。
+    </div>
+    <p class="t" style="margin-top:20px">这两件事放在一起看：光学环节在被收拢，谁同时握住<b>产线、客户和资本</b>，谁就能把别人的能力变成自己的产能。对小厂来说这是挤压，对敢做重资产的人这是机会。</p>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">03</span>
+      <h2>AR 全彩光波导<span>／五款产品，四条工艺路线</span></h2>
+    </div>
+    <figure class="shot shot--top">
+      <img src="assets/xr-visual.jpg" width="1600" height="873" alt="歌尔光学 VR/AR 光学解决方案主视觉：戴着头显的人物侧影，镜片发出青绿色光点">
+      <figcaption><span>VR / AR 光学解决方案</span><span>图源：歌尔光学官网</span></figcaption>
+    </figure>
+    <div class="wg">
+      <div class="row">
+        <span class="nm">F20Ge-FL<i>刻蚀衍射 · 全贴合</i></span>
+        <span class="mt">0.65 mm ／ &lt;4 g<br>透过率 &gt;94%</span>
+        <span class="ds">全贴合工艺消除波导基底与盖板之间的空气层——这是行业主流「框贴」方案的通病。含双层盖板总厚仍只有 0.65 mm，兼顾低色差与结构可靠性。</span>
+      </div>
+      <div class="row">
+        <span class="nm">F20Gi<i>纳米压印</i></span>
+        <span class="mt">0.5 mm ／ 3.2 g</span>
+        <span class="ds">单片最薄的一档，适配消费级 AI 眼镜。靠光栅优化压住彩虹纹，室内近乎不可见。</span>
+      </div>
+      <div class="row">
+        <span class="nm">F25Ge-DUV<i>DUV 光刻刻蚀</i></span>
+        <span class="mt">MTF ↑30%</span>
+        <span class="ds">图像细节还原指标比「纳米压印 + 刻蚀」方案高 30%，户外显示更清楚。依托国内首条 12 英寸 DUV+刻蚀量产线，可规模化批量交付。</span>
+      </div>
+      <div class="row">
+        <span class="nm">F25Ge-LT<i>低密度基材</i></span>
+        <span class="mt">厚 ↓30% ／ 重 ↓50%</span>
+        <span class="ds">基底从 0.7 mm 压到 0.5 mm，整体厚度减 30%、重量最高降一半，配微型 MicroLED 光引擎，色彩一致性表现突出。</span>
+      </div>
+      <div class="row">
+        <span class="nm">F50Se<i>碳化硅</i></span>
+        <span class="mt">50° ／ &gt;1500 nit</span>
+        <span class="ds">主打大视场，配自研 0.75 cc LCoS 光机，入眼亮度超 1500 尼特。2026 年 1 月在 SPIE 首发。</span>
+      </div>
+    </div>
+    <p class="t" style="margin-top:22px">这五款图什么：<b>把「厚、重、彩虹纹、看不清」四个问题分头解掉</b>。刻蚀与纳米压印两条路并行，DUV 保画质、低密度基材保轻、碳化硅保视场——没有一款是全能，看你把哪一项排在第一位。</p>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">04</span>
+      <h2>VR / MR 折叠光路<span>／Pancake 的两条路</span></h2>
+    </div>
+    <div class="prods">
+      <div class="prod">
+        <h3>星际 C61</h3>
+        <div class="sub">旗舰 · 高清大视场</div>
+        <ul>
+          <li>厚度 15.4 mm，较上代减薄超 10%</li>
+          <li>1.35 英寸 MicroOLED，单目 4K、双目 8K</li>
+          <li>单目水平视场 105°，双目组合最高 120° 以上</li>
+          <li>眼球转动时画面仍保持通透</li>
+        </ul>
+      </div>
+      <div class="prod">
+        <h3>星河 LE62</h3>
+        <div class="sub">小型化 · 轻量形态</div>
+        <ul>
+          <li>TTL 光路长度压缩至 <b>12.5 mm</b>，比主流 Pancake 方案短近一半</li>
+          <li>90° 视场角</li>
+          <li>复消色差技术压住边缘色散，中心到边缘清晰度一致</li>
+          <li>后续可兼容更小尺寸的高分辨率屏</li>
+        </ul>
+      </div>
+    </div>
+    <p class="t" style="margin-top:22px">VR 这一侧的技术收敛已经很清楚：硅基 OLED 加 Pancake 折叠光路。真正的比拼落在两处——<b>TTL 能不能再短</b>（决定头显厚薄），<b>边缘画质能不能守住</b>（决定戴久了晕不晕）。这两款正好各占一头。</p>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">05</span>
+      <h2>车载光学<span>／从照明单元变成交互载体</span></h2>
+    </div>
+    <figure class="shot shot--top">
+      <img src="assets/auto-visual.jpg" width="1600" height="873" alt="歌尔光学车载光学解决方案主视觉：夜色中行驶的轿车，前方悬浮着 AR-HUD 投影界面">
+      <figcaption><span>车载光学解决方案</span><span>图源：歌尔光学官网</span></figcaption>
+    </figure>
+    <div class="cols">
+      <div>
+        <p class="t">2022 年首款车载 HUD 曲面镜量产，是这条线的起点。现在的产品矩阵已经摊开到三块：<b>AR-HUD 的 PGU 模组、智能大灯、座舱投影</b>。</p>
+        <p class="t">PGU4620 Gen2 车载模组亮度比上一代提升 <b>80%</b>，支持多色温调节——HUD 在强光下的可读性，靠的就是这个。</p>
+      </div>
+      <div>
+        <p class="t">大灯这块做了两个「行业首创」的方向：<b>双模 DLP 投影大灯</b>采用双光路，白光照明与彩色投影可以独立运行，破解了亮度与色彩难以兼得的老问题；<b>Micro LED 数字矩阵大灯</b>有 2.56 万像素，会车时精准遮蔽对向区域，光学畸变控制在 1.5% 以内。</p>
+        <p class="t">另有 0.39 英寸 DLP 车载投影光机，用像素位移技术做到 4K，覆盖座舱娱乐与地面提示。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">06</span>
+      <h2>投影与工业视觉<span>／同一套光路能力，卖给另外两个行业</span></h2>
+    </div>
+    <figure class="shot shot--top">
+      <img src="assets/projection-visual.jpg" width="1600" height="873" alt="歌尔光学智能微投影光学解决方案主视觉：一组镜片沿光轴排列，光线穿过形成光环">
+      <figcaption><span>智能微投影光学解决方案</span><span>图源：歌尔光学官网</span></figcaption>
+    </figure>
+    <div class="cols">
+      <div>
+        <p class="t">投影线以 DLP 技术为基础，提供从光学设计到量产的全流程，覆盖 <b>0.2 到 0.47 英寸</b>全系列微投影光机，镜头从超短焦到长焦都有。</p>
+        <p class="t">2026 年新推的是 0.47 英寸三色激光变焦光机，<b>3400 流明</b>，比前代提升约 20%——这个亮度意味着白天不拉窗帘也能看。同时改了散热结构，减少开机虚焦。</p>
+      </div>
+      <div>
+        <p class="t">工业视觉是另一条被低估的线：<b>3D 轮廓仪激光模组 + 高精度工业镜头</b>，能做到微米级轮廓检测，客户是 3C 电子和锂电池这类对精度极敏感的行业。</p>
+        <p class="t">还有微纳光学元件与三维视觉模组的布局——在智能手机、智能家居、工业机器人上都能用。以及在 Formnext 展出的高精度 3D 打印光学部件与视觉检测方案。</p>
+        <p class="t">逻辑是一样的：<b>会设计光路、会做精密加工、会控良率，这套能力可以卖给任何一个需要「看清楚」的行业</b>。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="num">07</span>
+      <h2>现在在找的人</h2>
+    </div>
+    <p class="t" style="max-width:66ch">从公开在招的方向看，最难补的是光学设计中的<b>衍射光栅</b>这一支——既要懂电磁场仿真，又要懂纳米压印与光刻刻蚀的工艺窗口，两头都会的人不多。</p>
+    <ul class="roles">
+      <li><b>光学设计（成像 / 照明 / 自由曲面）</b><span>潍坊 · 青岛 · 上海</span></li>
+      <li><b>衍射光波导光栅设计</b><span>上海 · 深圳</span></li>
+      <li><b>超精密加工与镀膜工艺</b><span>潍坊 · 上海</span></li>
+      <li><b>模组工艺与量产工程</b><span>潍坊 · 12 英寸线</span></li>
+      <li><b>车载光学（HUD / PGU / 大灯）</b><span>潍坊 · 上海</span></li>
+      <li><b>工业视觉与 3D 检测</b><span>青岛 · 深圳</span></li>
+    </ul>
+    <p class="t" style="margin-top:16px; font-size:13px; color:var(--ink-3)">岗位方向依公开信息与业务线整理，具体职级、汇报线与薪酬带宽单独聊。</p>
+
+    <div class="cta">
+      <a class="btn btn--fill" href="mailto:1045321663@qq.com?subject=%E5%BA%94%E8%81%98%20%E6%AD%8C%E5%B0%94%E5%85%89%E5%AD%A6">发邮件聊聊</a>
+      <a class="btn" href="weixin://">微信 Ljhh-HH6666</a>
+    </div>
+  </section>
+
+  <footer>
+    <p><b>歌尔光学 Goeroptics</b> · 本页由猎头 Lionel 受客户委托整理，非企业官方页面。数据引自歌尔光学官网与 CIOE 2026 发布、工商变更公示、公开媒体报道，整理截至 2026-11-23。配图取自歌尔光学官网，版权归其所有，仅用于人才沟通说明。</p>
+    <p style="text-align:right">猎头 Lionel，受客户委托寻访<br>微信 Ljhh-HH6666 ／ 1045321663@qq.com</p>
+  </footer>
+</div>
+
+</body>
+</html>
